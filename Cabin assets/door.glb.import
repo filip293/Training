@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://gfxk5msxjd2o"
-path="res://.godot/imported/Three Izba Cabins.fbx-bde65459c436983e0880bc5030dcb9de.scn"
+uid="uid://1uyu0sb5h7ou"
+path="res://.godot/imported/door.glb-69f8c01fdea3ec94fbd1080e074ecc25.scn"
 
 [deps]
 
-source_file="res://Three cabins/Three Izba Cabins.fbx"
-dest_files=["res://.godot/imported/Three Izba Cabins.fbx-bde65459c436983e0880bc5030dcb9de.scn"]
+source_file="res://Cabin assets/door.glb"
+dest_files=["res://.godot/imported/door.glb-69f8c01fdea3ec94fbd1080e074ecc25.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,7 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1
