@@ -12,6 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://bnpl1q016rrb7" path="res://Cabin assets/cabin_door.glb" id="8_7p24d"]
 [ext_resource type="Texture2D" uid="uid://cxuosowph5c6p" path="res://Three Cabins/Textures/Weathered Brown Planks NM.png" id="8_v5ica"]
 [ext_resource type="Texture2D" uid="uid://b6bolkfwpf237" path="res://Three Cabins/Textures/Worn Wood NM.png" id="10_brmr7"]
+[ext_resource type="Script" uid="uid://tljov3bf83cg" path="res://Player.gd" id="13_usbmj"]
+[ext_resource type="Texture2D" uid="uid://c31mf1acadsdv" path="res://Textures/Ground/Ground110_1K-JPG_Color.jpg" id="14_a15gv"]
+[ext_resource type="Texture2D" uid="uid://cf4pchpvlc0wc" path="res://Textures/Ground/Ground110_1K-JPG_NormalDX.jpg" id="15_50dpj"]
+[ext_resource type="Texture2D" uid="uid://c6qv7430vdnsv" path="res://Textures/Grass/Grass001_1K-JPG_Color.jpg" id="16_b7j8m"]
+[ext_resource type="Texture2D" uid="uid://dpvx34cymhts0" path="res://Textures/Grass/Grass001_1K-JPG_NormalGL.jpg" id="17_u6lov"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qwcq"]
 resource_name = "Log Wall 3"
@@ -226,6 +231,86 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lu3s4")
 
+[sub_resource type="Gradient" id="Gradient_cw8cn"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_usbmj"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_teqc5"]
+noise = SubResource("FastNoiseLite_usbmj")
+color_ramp = SubResource("Gradient_cw8cn")
+seamless = true
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_v5ica"]
+_shader_parameters = {
+&"bias_distance": null,
+&"blend_sharpness": null,
+&"depth_blur": null,
+&"enable_macro_variation": null,
+&"enable_projection": null,
+&"flat_terrain_normals": null,
+&"macro_variation1": null,
+&"macro_variation2": null,
+&"macro_variation_slope": null,
+&"mipmap_bias": null,
+&"noise1_angle": null,
+&"noise1_offset": null,
+&"noise1_scale": null,
+&"noise2_scale": null,
+&"noise_texture": SubResource("NoiseTexture2D_teqc5"),
+&"projection_threshold": null
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxsl4"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_h3wf8"]
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_vxsl4")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_231ny"]
+name = "Ground110_1K-JPG_Color"
+albedo_texture = ExtResource("14_a15gv")
+normal_texture = ExtResource("15_50dpj")
+normal_depth = 1.0
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_utie3"]
+name = "Grass001_1K-JPG_Color"
+id = 1
+albedo_texture = ExtResource("16_b7j8m")
+normal_texture = ExtResource("17_u6lov")
+normal_depth = 1.0
+uv_scale = 0.5
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_h3wf8"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_h3wf8")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_231ny"), SubResource("Terrain3DTextureAsset_utie3")])
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ftei"]
+
 [node name="Node3D" type="Node3D" unique_id=1703375110]
 
 [node name="Three Izba Cabins" type="Node3D" parent="." unique_id=2037845405]
@@ -237,3 +322,24 @@ mesh = SubResource("ArrayMesh_x6b0q")
 
 [node name="EnterDoor" parent="Three Izba Cabins/Cabin Three" unique_id=355685050 instance=ExtResource("8_7p24d")]
 transform = Transform3D(1.0646359e-14, 1.9814028e-07, 4.999999, 5.5720086, -1.9814024e-07, 5.0821977e-21, 2.435602e-07, 4.53292, -2.1855686e-07, 0.10015392, 4.991226, 0.78471464)
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=547362921]
+data_directory = "res://Terrain3D"
+material = SubResource("Terrain3DMaterial_v5ica")
+assets = SubResource("Terrain3DAssets_h3wf8")
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=287516712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.765025, 1.9119959, 9.556675)
+script = ExtResource("13_usbmj")
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1305443085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6220186, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=635669612]
+shape = SubResource("CapsuleShape3D_5ftei")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=554432492]
+transform = Transform3D(0.9524741, -0.22977744, 0.19998841, -0.3046195, -0.7184605, 0.6253171, 0, -0.65651876, -0.7543097, 0, 34.120434, 0)
+shadow_enabled = true
