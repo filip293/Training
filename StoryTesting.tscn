@@ -2,11 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://ip2r3sbywr6h" path="res://Three Cabins/Textures/Log Wall.png" id="1_wru4m"]
 [ext_resource type="Texture2D" uid="uid://e7a5lqdp7grh" path="res://Three Cabins/Textures/Rough Wood.png" id="2_6ov2a"]
+[ext_resource type="Texture2D" uid="uid://cn7j3g778kjqb" path="res://Three Cabins/Textures/Log Wall NM.png" id="2_cw8cn"]
 [ext_resource type="Texture2D" uid="uid://c3xr5gnmdate8" path="res://Three Cabins/Textures/Thatched Roof.png" id="3_twjqn"]
 [ext_resource type="Texture2D" uid="uid://d04kipx1uwegp" path="res://Three Cabins/Textures/Weathered Brown Planks.png" id="4_7p24d"]
+[ext_resource type="Texture2D" uid="uid://gxi6ap7ah3be" path="res://Three Cabins/Textures/Rough Wood NM.png" id="4_usbmj"]
 [ext_resource type="Texture2D" uid="uid://di13yvomplk8e" path="res://Three Cabins/Textures/Window Hatch.jpg" id="5_ch7ol"]
 [ext_resource type="Texture2D" uid="uid://cimspjqcayf6a" path="res://Three Cabins/Textures/Worn Wood.png" id="6_04k41"]
+[ext_resource type="Texture2D" uid="uid://c8f4787j78cat" path="res://Three Cabins/Textures/Thatched Roof NM.png" id="6_teqc5"]
 [ext_resource type="PackedScene" uid="uid://bnpl1q016rrb7" path="res://Cabin assets/cabin_door.glb" id="8_7p24d"]
+[ext_resource type="Texture2D" uid="uid://cxuosowph5c6p" path="res://Three Cabins/Textures/Weathered Brown Planks NM.png" id="8_v5ica"]
+[ext_resource type="Texture2D" uid="uid://b6bolkfwpf237" path="res://Three Cabins/Textures/Worn Wood NM.png" id="10_brmr7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qwcq"]
 resource_name = "Log Wall 3"
@@ -15,6 +20,8 @@ albedo_texture = ExtResource("1_wru4m")
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_texture = ExtResource("2_cw8cn")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpklr"]
 resource_name = "Rough Wood 3"
@@ -23,6 +30,8 @@ albedo_texture = ExtResource("2_6ov2a")
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_texture = ExtResource("4_usbmj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejj41"]
 resource_name = "Thatched Roof 3"
@@ -32,6 +41,8 @@ albedo_texture = ExtResource("3_twjqn")
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_texture = ExtResource("6_teqc5")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3n3ex"]
 resource_name = "Weathered Planks 3"
@@ -40,6 +51,8 @@ albedo_texture = ExtResource("4_7p24d")
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_texture = ExtResource("8_v5ica")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sxd7"]
 resource_name = "Window Hatch 3"
@@ -48,6 +61,8 @@ albedo_texture = ExtResource("5_ch7ol")
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_texture = ExtResource("10_brmr7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iue8w"]
 resource_name = "Worn Wood 3"
@@ -56,6 +71,8 @@ albedo_texture = ExtResource("6_04k41")
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_texture = ExtResource("10_brmr7")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lu3s4"]
 _surfaces = [{
@@ -219,4 +236,4 @@ transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, 0.99999994, 0, -0.99999994, 
 mesh = SubResource("ArrayMesh_x6b0q")
 
 [node name="EnterDoor" parent="Three Izba Cabins/Cabin Three" unique_id=355685050 instance=ExtResource("8_7p24d")]
-transform = Transform3D(1.0646371e-14, 1.981405e-07, 4.999999, 5.5720105, -1.9814047e-07, 1.8634725e-20, 2.4356052e-07, 4.532922, -2.1855675e-07, 0.109764695, 4.957405, 0.7847149)
+transform = Transform3D(1.0646359e-14, 1.9814028e-07, 4.999999, 5.5720086, -1.9814024e-07, 5.0821977e-21, 2.435602e-07, 4.53292, -2.1855686e-07, 0.10015392, 4.991226, 0.78471464)
