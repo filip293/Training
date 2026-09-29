@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bnpl1q016rrb7" path="res://Cabin assets/cabin_door.glb" id="8_7p24d"]
 [ext_resource type="Texture2D" uid="uid://cxuosowph5c6p" path="res://Three Cabins/Textures/Weathered Brown Planks NM.png" id="8_v5ica"]
 [ext_resource type="Texture2D" uid="uid://b6bolkfwpf237" path="res://Three Cabins/Textures/Worn Wood NM.png" id="10_brmr7"]
+[ext_resource type="PackedScene" uid="uid://wutcy65cvya6" path="res://Tree.tscn" id="13_50dpj"]
 [ext_resource type="Script" uid="uid://tljov3bf83cg" path="res://Player.gd" id="13_usbmj"]
 [ext_resource type="Texture2D" uid="uid://c31mf1acadsdv" path="res://Textures/Ground/Ground110_1K-JPG_Color.jpg" id="14_a15gv"]
 [ext_resource type="Texture2D" uid="uid://cf4pchpvlc0wc" path="res://Textures/Ground/Ground110_1K-JPG_NormalDX.jpg" id="15_50dpj"]
@@ -274,20 +275,10 @@ _shader_parameters = {
 &"projection_threshold": null
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxsl4"]
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-backlight_enabled = true
-backlight = Color(0.5, 0.5, 0.5, 1)
-distance_fade_mode = 1
-distance_fade_min_distance = 128.0
-distance_fade_max_distance = 96.0
-
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_h3wf8"]
-generated_type = 1
-height_offset = 0.5
-material_override = SubResource("StandardMaterial3D_vxsl4")
+name = "Tree"
+scene_file = ExtResource("13_50dpj")
+density = 0.01
 last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
