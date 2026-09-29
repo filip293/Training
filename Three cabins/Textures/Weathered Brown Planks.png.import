@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d04kipx1uwegp"
-path.s3tc="res://.godot/imported/Weathered Brown Planks.png-39eadb397af58f36d2d55d6ded785d78.s3tc.ctex"
+path.s3tc="res://.godot/imported/Weathered Brown Planks.png-fa965988302b59185b5ef6f63740c430.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Three cabins/Textures/Weathered Brown Planks.png"
-dest_files=["res://.godot/imported/Weathered Brown Planks.png-39eadb397af58f36d2d55d6ded785d78.s3tc.ctex"]
+source_file="res://Three Cabins/Textures/Weathered Brown Planks.png"
+dest_files=["res://.godot/imported/Weathered Brown Planks.png-fa965988302b59185b5ef6f63740c430.s3tc.ctex"]
 
 [params]
 
