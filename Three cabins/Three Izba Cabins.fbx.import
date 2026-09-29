@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://gfxk5msxjd2o"
-path="res://.godot/imported/Three Izba Cabins.fbx-a503539bcc2e76ea5031887ec7e3f6d0.scn"
+path="res://.godot/imported/Three Izba Cabins.fbx-1c9c01e3d9d1b1d0959a277dde6c7f39.scn"
 
 [deps]
 
-source_file="res://Three cabins/Three Cabins/Three Izba Cabins.fbx"
-dest_files=["res://.godot/imported/Three Izba Cabins.fbx-a503539bcc2e76ea5031887ec7e3f6d0.scn"]
+source_file="res://Three Cabins/Three Izba Cabins.fbx"
+dest_files=["res://.godot/imported/Three Izba Cabins.fbx-1c9c01e3d9d1b1d0959a277dde6c7f39.scn"]
 
 [params]
 

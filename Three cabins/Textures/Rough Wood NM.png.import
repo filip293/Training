@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cimspjqcayf6a"
-path.s3tc="res://.godot/imported/Worn Wood.png-889a5cd522b37a997aa1259fd9b736ac.s3tc.ctex"
+uid="uid://gxi6ap7ah3be"
+path="res://.godot/imported/Rough Wood NM.png-0ba35e10bb8441416ca7744d1b1849ce.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Three cabins/Three Cabins/Textures/Worn Wood.png"
-dest_files=["res://.godot/imported/Worn Wood.png-889a5cd522b37a997aa1259fd9b736ac.s3tc.ctex"]
+source_file="res://Three Cabins/Textures/Rough Wood NM.png"
+dest_files=["res://.godot/imported/Rough Wood NM.png-0ba35e10bb8441416ca7744d1b1849ce.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -24,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -38,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

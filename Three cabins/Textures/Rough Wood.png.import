@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di13yvomplk8e"
-path.s3tc="res://.godot/imported/Window Hatch.jpg-55ac68884f1d984db22b99bc54d2a1ec.s3tc.ctex"
+uid="uid://e7a5lqdp7grh"
+path.s3tc="res://.godot/imported/Rough Wood.png-f50a4a5c8c2e950939246b172f629dfe.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Three cabins/Three Cabins/Textures/Window Hatch.jpg"
-dest_files=["res://.godot/imported/Window Hatch.jpg-55ac68884f1d984db22b99bc54d2a1ec.s3tc.ctex"]
+source_file="res://Three Cabins/Textures/Rough Wood.png"
+dest_files=["res://.godot/imported/Rough Wood.png-f50a4a5c8c2e950939246b172f629dfe.s3tc.ctex"]
 
 [params]
 
