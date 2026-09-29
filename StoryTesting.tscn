@@ -16,7 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://c31mf1acadsdv" path="res://Textures/Ground/Ground110_1K-JPG_Color.jpg" id="14_a15gv"]
 [ext_resource type="Texture2D" uid="uid://cf4pchpvlc0wc" path="res://Textures/Ground/Ground110_1K-JPG_NormalDX.jpg" id="15_50dpj"]
 [ext_resource type="Texture2D" uid="uid://c6qv7430vdnsv" path="res://Textures/Grass/Grass001_1K-JPG_Color.jpg" id="16_b7j8m"]
+[ext_resource type="Texture2D" uid="uid://y1wh1wfnq2a8" path="res://Textures/Mud/Ground036_1K-JPG_Color.jpg" id="17_a15gv"]
 [ext_resource type="Texture2D" uid="uid://dpvx34cymhts0" path="res://Textures/Grass/Grass001_1K-JPG_NormalGL.jpg" id="17_u6lov"]
+[ext_resource type="Texture2D" uid="uid://bw0fgt7gsevyd" path="res://Textures/Mud/Ground036_1K-JPG_NormalDX.jpg" id="18_50dpj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qwcq"]
 resource_name = "Log Wall 3"
@@ -305,16 +307,24 @@ normal_texture = ExtResource("17_u6lov")
 normal_depth = 1.0
 uv_scale = 0.5
 
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_b7j8m"]
+name = "Ground036_1K-JPG_Color"
+id = 2
+albedo_texture = ExtResource("17_a15gv")
+normal_texture = ExtResource("18_50dpj")
+normal_depth = 1.672
+uv_scale = 0.6
+
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_h3wf8"]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_h3wf8")])
-texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_231ny"), SubResource("Terrain3DTextureAsset_utie3")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_231ny"), SubResource("Terrain3DTextureAsset_utie3"), SubResource("Terrain3DTextureAsset_b7j8m")])
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ftei"]
 
 [node name="Node3D" type="Node3D" unique_id=1703375110]
 
 [node name="Three Izba Cabins" type="Node3D" parent="." unique_id=2037845405]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057994843, 0.068500996, 0.10060644)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057994843, 4.7945247, 0.10060644)
 
 [node name="Cabin Three" type="MeshInstance3D" parent="Three Izba Cabins" unique_id=1643267854]
 transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, 0.99999994, 0, -0.99999994, -1.1920929e-07, 0, 0, 14.882766)
@@ -331,7 +341,7 @@ top_level = true
 metadata/_edit_lock_ = true
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=287516712]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.765025, 1.9119959, 9.556675)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.766396, 19.759678, 90.369774)
 script = ExtResource("13_usbmj")
 
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=1305443085]
