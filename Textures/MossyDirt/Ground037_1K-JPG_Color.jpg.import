@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btk2nvlx1ipyp"
-path="res://.godot/imported/Rock063_1K-JPG_Color.jpg-15cc5ce6b01fa892d56b1f16c2678cb4.ctex"
+uid="uid://ey28w7gvkb3m"
+path="res://.godot/imported/Ground037_1K-JPG_Color.jpg-1bdc9bbd51346f00d598d3a336e25cc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/MossyRock/Rock063_1K-JPG_Color.jpg"
-dest_files=["res://.godot/imported/Rock063_1K-JPG_Color.jpg-15cc5ce6b01fa892d56b1f16c2678cb4.ctex"]
+source_file="res://Textures/MossyDirt/Ground037_1K-JPG_Color.jpg"
+dest_files=["res://.godot/imported/Ground037_1K-JPG_Color.jpg-1bdc9bbd51346f00d598d3a336e25cc2.ctex"]
 
 [params]
 

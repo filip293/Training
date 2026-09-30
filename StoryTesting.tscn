@@ -30,6 +30,8 @@
 [ext_resource type="PackedScene" uid="uid://smgjxy8ie7ur" path="res://Foliage/Log/log.glb" id="25_e3avu"]
 [ext_resource type="Texture2D" uid="uid://ojtxiwkgik1q" path="res://Textures/GroundWithLeaves/Ground023_1K-JPG_NormalGL.jpg" id="25_jt42e"]
 [ext_resource type="PackedScene" uid="uid://cwe3j5i6qwjmi" path="res://Foliage/Rock/ruined_rock_fence.glb" id="26_m4cqx"]
+[ext_resource type="Texture2D" uid="uid://ey28w7gvkb3m" path="res://Textures/MossyDirt/Ground037_1K-JPG_Color.jpg" id="28_nm4bd"]
+[ext_resource type="Texture2D" uid="uid://c0puehioil7t2" path="res://Textures/MossyDirt/Ground037_1K-JPG_NormalDX.jpg" id="29_s3656"]
 [ext_resource type="AudioStream" uid="uid://1kgmkjaeka0v" path="res://Sounds/FootstepGround/Ground1.wav" id="31_mibjj"]
 [ext_resource type="AudioStream" uid="uid://dt41eofkfb3s2" path="res://Sounds/FootstepGround/Ground2.wav" id="32_jt42e"]
 [ext_resource type="AudioStream" uid="uid://cl2tful84on1h" path="res://Sounds/FootstepGround/Ground3.wav" id="33_nm4bd"]
@@ -391,9 +393,17 @@ normal_depth = 2.0
 roughness = 1.0
 uv_scale = 0.5
 
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_iy4ep"]
+name = "Ground037_1K-JPG_Color"
+id = 4
+albedo_texture = ExtResource("28_nm4bd")
+normal_texture = ExtResource("29_s3656")
+normal_depth = 2.0
+uv_scale = 0.5
+
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_h3wf8"]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_d63ey"), SubResource("Terrain3DMeshAsset_m4cqx"), SubResource("Terrain3DMeshAsset_e61ml")])
-texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_231ny"), SubResource("Terrain3DTextureAsset_utie3"), SubResource("Terrain3DTextureAsset_b7j8m"), SubResource("Terrain3DTextureAsset_e3avu")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_231ny"), SubResource("Terrain3DTextureAsset_utie3"), SubResource("Terrain3DTextureAsset_b7j8m"), SubResource("Terrain3DTextureAsset_e3avu"), SubResource("Terrain3DTextureAsset_iy4ep")])
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d63ey"]
 size = Vector3(91.594536, 96.102036, 703.31885)
