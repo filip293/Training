@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daahf75pnk3h"
-path.s3tc="res://.godot/imported/fern_0.png-dec570b79bf0bd01b37e8e9b59d38037.s3tc.ctex"
+uid="uid://vk5yyd6e42j8"
+path.s3tc="res://.godot/imported/low_poly_plant_-_by_lemstrx_0.png-a559bc6067f2ca29e55f46d099711cce.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "b8b8aa2cf6c78b553ed789a1d1024a94"
+"md5": "6fc232384a5754d8dd284d55dac74317"
 }
 
 [deps]
 
-source_file="res://Foliage/Fern/fern_0.png"
-dest_files=["res://.godot/imported/fern_0.png-dec570b79bf0bd01b37e8e9b59d38037.s3tc.ctex"]
+source_file="res://Foliage/Plant/low_poly_plant_-_by_lemstrx_0.png"
+dest_files=["res://.godot/imported/low_poly_plant_-_by_lemstrx_0.png-a559bc6067f2ca29e55f46d099711cce.s3tc.ctex"]
 
 [params]
 

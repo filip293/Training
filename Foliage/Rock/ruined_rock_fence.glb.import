@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c4yjbv6y7ddv7"
-path="res://.godot/imported/fern.glb-4696b3a038465ff568e433ec63ae7186.scn"
+uid="uid://cwe3j5i6qwjmi"
+path="res://.godot/imported/ruined_rock_fence.glb-0eee56b44c27ebcea1dca7a59dbaa88c.scn"
 
 [deps]
 
-source_file="res://Foliage/Fern/fern.glb"
-dest_files=["res://.godot/imported/fern.glb-4696b3a038465ff568e433ec63ae7186.scn"]
+source_file="res://Foliage/Rock/ruined_rock_fence.glb"
+dest_files=["res://.godot/imported/ruined_rock_fence.glb-0eee56b44c27ebcea1dca7a59dbaa88c.scn"]
 
 [params]
 

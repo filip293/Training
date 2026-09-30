@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://gfxk5msxjd2o"
-path="res://.godot/imported/Three Izba Cabins.fbx-1c9c01e3d9d1b1d0959a277dde6c7f39.scn"
+uid="uid://bnnjnjepglut8"
+path="res://.godot/imported/detailed_grass_-_by_lemstrx.glb-ef84e1a3d6e745f128a9f7f5635d5693.scn"
 
 [deps]
 
-source_file="res://Three Cabins/Three Izba Cabins.fbx"
-dest_files=["res://.godot/imported/Three Izba Cabins.fbx-1c9c01e3d9d1b1d0959a277dde6c7f39.scn"]
+source_file="res://Foliage/Grass/detailed_grass_-_by_lemstrx.glb"
+dest_files=["res://.godot/imported/detailed_grass_-_by_lemstrx.glb-ef84e1a3d6e745f128a9f7f5635d5693.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,7 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1
