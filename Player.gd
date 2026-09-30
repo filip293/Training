@@ -11,9 +11,20 @@ extends CharacterBody3D
 @export var mouse_sensitivity: float = 0.003
 @export var max_pitch: float = 89.0
 
+@export_group("Footstep Settings")
+## Distance (in meters) the player must move to trigger a footstep
+@export var step_distance: float = 1.8
+@export var default_footsteps: Array[AudioStream] = []
+@export var grass_footsteps: Array[AudioStream] = []
+@export var road_footsteps: Array[AudioStream] = []
+@export var house_footsteps: Array[AudioStream] = []
+
 @onready var camera: Camera3D = $Camera3D
+@onready var footstep_player: AudioStreamPlayer3D = $FootstepAudioPlayer3D
+@onready var ground_detector: Area3D = $GroundDetectorArea3D
 
 var rotation_x: float = 0.0
+var distance_traveled: float = 0.0
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -65,3 +76,75 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, decel * delta)
 
 	move_and_slide()
+
+	_handle_footsteps(delta)
+
+func _handle_footsteps(_delta: float) -> void:
+	var horizontal_velocity = Vector3(velocity.x, 0, velocity.z)
+	if is_on_floor() and horizontal_velocity.length() > 0.1:
+		distance_traveled += horizontal_velocity.length() * _delta
+		if distance_traveled >= step_distance:
+			distance_traveled = 0.0
+			_play_footstep_sound()
+	else:
+		distance_traveled = 0.0
+
+func _play_footstep_sound() -> void:
+	if not footstep_player:
+		return
+
+	var current_surface = _get_current_surface_from_area()
+	var audio_pool: Array[AudioStream] = default_footsteps
+
+	match current_surface:
+		"grass":
+			audio_pool = grass_footsteps
+		"road":
+			audio_pool = road_footsteps
+		"house":
+			audio_pool = house_footsteps
+		_:
+			audio_pool = default_footsteps
+
+	# Fallback if specific array is empty
+	if audio_pool.is_empty():
+		audio_pool = default_footsteps
+
+	if not audio_pool.is_empty():
+		footstep_player.stream = audio_pool.pick_random()
+		footstep_player.pitch_scale = randf_range(0.9, 1.1)
+		footstep_player.play()
+
+func _get_current_surface_from_area() -> String:
+	if not ground_detector:
+		return ""
+
+	# Check overlapping areas detected by feet
+	var overlapping_areas = ground_detector.get_overlapping_areas()
+	for area in overlapping_areas:
+		# Check groups on the area
+		if area.is_in_group("grass"):
+			return "grass"
+		elif area.is_in_group("road"):
+			return "road"
+		elif area.is_in_group("house"):
+			return "house"
+		
+		# Check metadata on the area
+		if area.has_meta("surface_type"):
+			return area.get_meta("surface_type")
+
+	# Check overlapping bodies (if roads/houses are StaticBody3D)
+	var overlapping_bodies = ground_detector.get_overlapping_bodies()
+	for body in overlapping_bodies:
+		if body.is_in_group("grass"):
+			return "grass"
+		elif body.is_in_group("road"):
+			return "road"
+		elif body.is_in_group("house"):
+			return "house"
+
+		if body.has_meta("surface_type"):
+			return body.get_meta("surface_type")
+
+	return ""
