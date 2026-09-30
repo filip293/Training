@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dpvx34cymhts0" path="res://Textures/Grass/Grass001_1K-JPG_NormalGL.jpg" id="17_u6lov"]
 [ext_resource type="Texture2D" uid="uid://bw0fgt7gsevyd" path="res://Textures/Mud/Ground036_1K-JPG_NormalDX.jpg" id="18_50dpj"]
 [ext_resource type="PackedScene" uid="uid://wqaki0tbwsh8" path="res://Foliage/Fern2/3d_fern_-_01.glb" id="18_e3avu"]
+[ext_resource type="PackedScene" uid="uid://bnnjnjepglut8" path="res://Foliage/Grass/detailed_grass_-_by_lemstrx.glb" id="19_e61ml"]
 [ext_resource type="Texture2D" uid="uid://c11pmc7ou641c" path="res://Textures/Rock2/Rock051_1K-JPG_Color.jpg" id="22_utie3"]
 [ext_resource type="Texture2D" uid="uid://qy82i1kyyavq" path="res://Textures/Rock2/Rock051_1K-JPG_NormalDX.jpg" id="23_2kyub"]
 [ext_resource type="PackedScene" uid="uid://smgjxy8ie7ur" path="res://Foliage/Log/log.glb" id="25_e3avu"]
@@ -319,6 +320,7 @@ _shader_parameters = {
 name = "low_poly_plant_-_by_lemstrx"
 scene_file = ExtResource("17_m4cqx")
 density = 4.1666665
+cast_shadows = 0
 last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
@@ -342,24 +344,15 @@ last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d63ey"]
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-backlight_enabled = true
-backlight = Color(0.5, 0.5, 0.5, 1)
-distance_fade_mode = 1
-distance_fade_min_distance = 128.0
-distance_fade_max_distance = 96.0
-
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_e61ml"]
+name = "detailed_grass_-_by_lemstrx"
 id = 2
-generated_type = 1
-height_offset = 0.5
-material_override = SubResource("StandardMaterial3D_d63ey")
-last_lod = 0
-last_shadow_lod = 0
-lod0_range = 128.0
+scene_file = ExtResource("19_e61ml")
+density = 1.0
+cast_shadows = 0
+last_lod = 1
+last_shadow_lod = 1
+lod1_range = 128.0
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_231ny"]
 name = "Ground110_1K-JPG_Color"
