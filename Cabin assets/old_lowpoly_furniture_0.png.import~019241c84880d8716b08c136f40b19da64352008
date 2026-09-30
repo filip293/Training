@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn7j3g778kjqb"
-path.s3tc="res://.godot/imported/Log Wall NM.png-d0585881133d086d51adda94c7dba4f9.s3tc.ctex"
+uid="uid://b1oq7v7ijuear"
+path.s3tc="res://.godot/imported/old_lowpoly_furniture_0.png-e0bc8384b7fe3cab04d6d366eeb1faaf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "145012e02e0be0bb69fdc78c6ab66d1b"
+}
 
 [deps]
 
-source_file="res://Three Cabins/Textures/Log Wall NM.png"
-dest_files=["res://.godot/imported/Log Wall NM.png-d0585881133d086d51adda94c7dba4f9.s3tc.ctex"]
+source_file="res://Cabin assets/old_lowpoly_furniture_0.png"
+dest_files=["res://.godot/imported/old_lowpoly_furniture_0.png-e0bc8384b7fe3cab04d6d366eeb1faaf.s3tc.ctex"]
 
 [params]
 
@@ -22,7 +25,7 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1

@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn7j3g778kjqb"
-path.s3tc="res://.godot/imported/Log Wall NM.png-d0585881133d086d51adda94c7dba4f9.s3tc.ctex"
+uid="uid://b3d5s7y88331v"
+path.s3tc="res://.godot/imported/detailed_grass_-_by_lemstrx_1.png-16753e27fb1bfa14c434fd115c3cce80.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "47e877e1ca1ec8e478973d345022426c"
+}
 
 [deps]
 
-source_file="res://Three Cabins/Textures/Log Wall NM.png"
-dest_files=["res://.godot/imported/Log Wall NM.png-d0585881133d086d51adda94c7dba4f9.s3tc.ctex"]
+source_file="res://Foliage/Grass/detailed_grass_-_by_lemstrx_1.png"
+dest_files=["res://.godot/imported/detailed_grass_-_by_lemstrx_1.png-16753e27fb1bfa14c434fd115c3cce80.s3tc.ctex"]
 
 [params]
 
@@ -22,7 +25,7 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1

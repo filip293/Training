@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn7j3g778kjqb"
-path.s3tc="res://.godot/imported/Log Wall NM.png-d0585881133d086d51adda94c7dba4f9.s3tc.ctex"
+uid="uid://vkpa4nubuu87"
+path.s3tc="res://.godot/imported/log_2.png-cc975984d9b06139c4f5b3f26fa1f692.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "d8f8378de3904d28e645a3a8d2b5e7ab"
+}
 
 [deps]
 
-source_file="res://Three Cabins/Textures/Log Wall NM.png"
-dest_files=["res://.godot/imported/Log Wall NM.png-d0585881133d086d51adda94c7dba4f9.s3tc.ctex"]
+source_file="res://Foliage/Log/log_2.png"
+dest_files=["res://.godot/imported/log_2.png-cc975984d9b06139c4f5b3f26fa1f692.s3tc.ctex"]
 
 [params]
 
@@ -26,8 +29,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://Foliage/Log/log_2.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
