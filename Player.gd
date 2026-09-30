@@ -1,19 +1,25 @@
 extends CharacterBody3D
 
-@export_group("Movement Settings")
-@export var max_speed: float = 2.0
-@export var acceleration: float = 30.0
-@export var deceleration: float = 40.0
-@export var air_control: float = 12.0
-@export var jump_velocity: float = 5.0
+@export_group("Cinematic Movement Settings")
+@export var walk_speed: float = 1.6
+@export var acceleration: float = 8.0
+@export var deceleration: float = 10.0
+@export var air_control: float = 4.0
+@export var jump_velocity: float = 4.0
 
-@export_group("Look Settings")
-@export var mouse_sensitivity: float = 0.003
-@export var max_pitch: float = 89.0
+@export_group("Look & Camera Settings")
+@export var mouse_sensitivity: float = 0.002
+@export var max_pitch: float = 85.0
+@export var camera_tilt_amount: float = 0.035  # Subtle lean when strafing
+
+@export_group("Head Bob Settings")
+@export var bob_frequency: float = 2.4        # Speed of step cycle
+@export var bob_amplitude: float = 0.04       # Vertical bob height
+@export var bob_h_amplitude: float = 0.02     # Horizontal swaying
 
 @export_group("Footstep Settings")
-## Distance (in meters) the player must move to trigger a footstep
-@export var step_distance: float = 1.8
+## Distance (in meters) the player must move to trigger a step
+@export var step_distance: float = 2.2
 @export var default_footsteps: Array[AudioStream] = []
 @export var grass_footsteps: Array[AudioStream] = []
 @export var road_footsteps: Array[AudioStream] = []
@@ -25,69 +31,96 @@ extends CharacterBody3D
 
 var rotation_x: float = 0.0
 var distance_traveled: float = 0.0
+var bob_time: float = 0.0
+var default_cam_pos: Vector3 = Vector3.ZERO
+var target_tilt: float = 0.0
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if camera:
+		default_cam_pos = camera.position
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		rotation_x -= event.relative.y * mouse_sensitivity
 		rotation_x = clamp(rotation_x, deg_to_rad(-max_pitch), deg_to_rad(max_pitch))
-		if camera:
-			camera.rotation.x = rotation_x
 
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_ESCAPE:
-			get_tree().quit()
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		get_tree().quit()
 
-	if event is InputEventMouseButton and event.pressed:
-		if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if event is InputEventMouseButton and event.pressed and Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta: float) -> void:
+	# Apply gravity smoothly
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
+	# Jump logic
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = jump_velocity
 
+	# Get WASD input direction
 	var input_dir := Vector2.ZERO
-	if Input.is_key_pressed(KEY_A):
-		input_dir.x -= 1.0
-	if Input.is_key_pressed(KEY_D):
-		input_dir.x += 1.0
-	if Input.is_key_pressed(KEY_W):
-		input_dir.y -= 1.0
-	if Input.is_key_pressed(KEY_S):
-		input_dir.y += 1.0
+	if Input.is_key_pressed(KEY_A): input_dir.x -= 1.0
+	if Input.is_key_pressed(KEY_D): input_dir.x += 1.0
+	if Input.is_key_pressed(KEY_W): input_dir.y -= 1.0
+	if Input.is_key_pressed(KEY_S): input_dir.y += 1.0
 	input_dir = input_dir.normalized()
 
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
+	# Weighty movement interpolation
 	var accel = acceleration if is_on_floor() else air_control
 	var decel = deceleration if is_on_floor() else air_control
 
 	if direction != Vector3.ZERO:
-		velocity.x = move_toward(velocity.x, direction.x * max_speed, accel * delta)
-		velocity.z = move_toward(velocity.z, direction.z * max_speed, accel * delta)
+		velocity.x = lerp(velocity.x, direction.x * walk_speed, accel * delta)
+		velocity.z = lerp(velocity.z, direction.z * walk_speed, accel * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0.0, decel * delta)
-		velocity.z = move_toward(velocity.z, 0.0, decel * delta)
+		velocity.x = lerp(velocity.x, 0.0, decel * delta)
+		velocity.z = lerp(velocity.z, 0.0, decel * delta)
+
+	# Calculate camera tilt target based on horizontal input
+	target_tilt = lerp(target_tilt, -input_dir.x * camera_tilt_amount, 5.0 * delta)
 
 	move_and_slide()
 
+	# Apply Camera effects and process footsteps
+	_apply_cinematic_camera(delta)
 	_handle_footsteps(delta)
 
-func _handle_footsteps(_delta: float) -> void:
+func _apply_cinematic_camera(delta: float) -> void:
+	if not camera:
+		return
+
+	# Apply Pitch/Yaw rotation with target strafe tilt
+	camera.rotation.x = rotation_x
+	camera.rotation.z = lerp(camera.rotation.z, target_tilt, 10.0 * delta)
+
+	# Procedural Head Bobbing
+	var speed = Vector3(velocity.x, 0, velocity.z).length()
+	if is_on_floor() and speed > 0.1:
+		bob_time += delta * speed * bob_frequency
+		var target_y = default_cam_pos.y + sin(bob_time) * bob_amplitude
+		var target_x = default_cam_pos.x + cos(bob_time * 0.5) * bob_h_amplitude
+		camera.position.y = lerp(camera.position.y, target_y, 10.0 * delta)
+		camera.position.x = lerp(camera.position.x, target_x, 10.0 * delta)
+	else:
+		# Smoothly reset camera pos when stopped or airborne
+		bob_time = 0.0
+		camera.position = camera.position.lerp(default_cam_pos, 8.0 * delta)
+
+func _handle_footsteps(delta: float) -> void:
 	var horizontal_velocity = Vector3(velocity.x, 0, velocity.z)
 	if is_on_floor() and horizontal_velocity.length() > 0.1:
-		distance_traveled += horizontal_velocity.length() * _delta
+		distance_traveled += horizontal_velocity.length() * delta
 		if distance_traveled >= step_distance:
 			distance_traveled = 0.0
 			_play_footstep_sound()
 	else:
-		distance_traveled = 0.0
+		distance_traveled = step_distance * 0.5  # Ready steps as soon as walking resumes
 
 func _play_footstep_sound() -> void:
 	if not footstep_player:
@@ -106,44 +139,32 @@ func _play_footstep_sound() -> void:
 		_:
 			audio_pool = default_footsteps
 
-	# Fallback if specific array is empty
 	if audio_pool.is_empty():
 		audio_pool = default_footsteps
 
 	if not audio_pool.is_empty():
 		footstep_player.stream = audio_pool.pick_random()
-		footstep_player.pitch_scale = randf_range(0.9, 1.1)
+		# Dynamic pitch variation to prevent audio fatigue
+		footstep_player.pitch_scale = randf_range(0.92, 1.05)
 		footstep_player.play()
 
 func _get_current_surface_from_area() -> String:
 	if not ground_detector:
 		return ""
 
-	# Check overlapping areas detected by feet
 	var overlapping_areas = ground_detector.get_overlapping_areas()
 	for area in overlapping_areas:
-		# Check groups on the area
-		if area.is_in_group("grass"):
-			return "grass"
-		elif area.is_in_group("road"):
-			return "road"
-		elif area.is_in_group("house"):
-			return "house"
-		
-		# Check metadata on the area
+		if area.is_in_group("grass"): return "grass"
+		elif area.is_in_group("road"): return "road"
+		elif area.is_in_group("house"): return "house"
 		if area.has_meta("surface_type"):
 			return area.get_meta("surface_type")
 
-	# Check overlapping bodies (if roads/houses are StaticBody3D)
 	var overlapping_bodies = ground_detector.get_overlapping_bodies()
 	for body in overlapping_bodies:
-		if body.is_in_group("grass"):
-			return "grass"
-		elif body.is_in_group("road"):
-			return "road"
-		elif body.is_in_group("house"):
-			return "house"
-
+		if body.is_in_group("grass"): return "grass"
+		elif body.is_in_group("road"): return "road"
+		elif body.is_in_group("house"): return "house"
 		if body.has_meta("surface_type"):
 			return body.get_meta("surface_type")
 
