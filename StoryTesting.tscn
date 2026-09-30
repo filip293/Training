@@ -1,20 +1,23 @@
 [gd_scene format=4 uid="uid://3sghxaq5c1ge"]
 
-[ext_resource type="Texture2D" uid="uid://ip2r3sbywr6h" path="res://Three Cabins/Textures/Log Wall.png" id="1_wru4m"]
-[ext_resource type="Texture2D" uid="uid://e7a5lqdp7grh" path="res://Three Cabins/Textures/Rough Wood.png" id="2_6ov2a"]
-[ext_resource type="Texture2D" uid="uid://cn7j3g778kjqb" path="res://Three Cabins/Textures/Log Wall NM.png" id="2_cw8cn"]
-[ext_resource type="Texture2D" uid="uid://c3xr5gnmdate8" path="res://Three Cabins/Textures/Thatched Roof.png" id="3_twjqn"]
-[ext_resource type="Texture2D" uid="uid://d04kipx1uwegp" path="res://Three Cabins/Textures/Weathered Brown Planks.png" id="4_7p24d"]
-[ext_resource type="Texture2D" uid="uid://gxi6ap7ah3be" path="res://Three Cabins/Textures/Rough Wood NM.png" id="4_usbmj"]
-[ext_resource type="Texture2D" uid="uid://di13yvomplk8e" path="res://Three Cabins/Textures/Window Hatch.jpg" id="5_ch7ol"]
-[ext_resource type="Texture2D" uid="uid://cimspjqcayf6a" path="res://Three Cabins/Textures/Worn Wood.png" id="6_04k41"]
-[ext_resource type="Texture2D" uid="uid://c8f4787j78cat" path="res://Three Cabins/Textures/Thatched Roof NM.png" id="6_teqc5"]
+[ext_resource type="Texture2D" uid="uid://ip2r3sbywr6h" path="res://Three cabins/Textures/Log Wall.png" id="1_wru4m"]
+[ext_resource type="Texture2D" uid="uid://e7a5lqdp7grh" path="res://Three cabins/Textures/Rough Wood.png" id="2_6ov2a"]
+[ext_resource type="Texture2D" uid="uid://cn7j3g778kjqb" path="res://Three cabins/Textures/Log Wall NM.png" id="2_cw8cn"]
+[ext_resource type="Texture2D" uid="uid://c3xr5gnmdate8" path="res://Three cabins/Textures/Thatched Roof.png" id="3_twjqn"]
+[ext_resource type="Texture2D" uid="uid://d04kipx1uwegp" path="res://Three cabins/Textures/Weathered Brown Planks.png" id="4_7p24d"]
+[ext_resource type="Texture2D" uid="uid://gxi6ap7ah3be" path="res://Three cabins/Textures/Rough Wood NM.png" id="4_usbmj"]
+[ext_resource type="Texture2D" uid="uid://di13yvomplk8e" path="res://Three cabins/Textures/Window Hatch.jpg" id="5_ch7ol"]
+[ext_resource type="Texture2D" uid="uid://cimspjqcayf6a" path="res://Three cabins/Textures/Worn Wood.png" id="6_04k41"]
+[ext_resource type="Texture2D" uid="uid://c8f4787j78cat" path="res://Three cabins/Textures/Thatched Roof NM.png" id="6_teqc5"]
 [ext_resource type="PackedScene" uid="uid://bnpl1q016rrb7" path="res://Cabin assets/cabin_door.glb" id="8_7p24d"]
-[ext_resource type="Texture2D" uid="uid://cxuosowph5c6p" path="res://Three Cabins/Textures/Weathered Brown Planks NM.png" id="8_v5ica"]
-[ext_resource type="Texture2D" uid="uid://b6bolkfwpf237" path="res://Three Cabins/Textures/Worn Wood NM.png" id="10_brmr7"]
-[ext_resource type="PackedScene" uid="uid://bnnjnjepglut8" path="res://Foliage/Grass/detailed_grass_-_by_lemstrx.glb" id="13_2kyub"]
+[ext_resource type="Texture2D" uid="uid://cxuosowph5c6p" path="res://Three cabins/Textures/Weathered Brown Planks NM.png" id="8_v5ica"]
+[ext_resource type="Texture2D" uid="uid://b6bolkfwpf237" path="res://Three cabins/Textures/Worn Wood NM.png" id="10_brmr7"]
+[ext_resource type="PackedScene" uid="uid://d157vhi0ounb2" path="res://Foliage/Tree/pine_tree_low-poly.glb" id="13_50dpj"]
+[ext_resource type="PackedScene" uid="uid://diu5omsjohp5n" path="res://Cabin assets/chandelier_lowpoly.glb" id="13_e3avu"]
+[ext_resource type="Shader" uid="uid://b2awe20en8rxl" path="res://TreeWind.gdshader" id="13_u6lov"]
 [ext_resource type="Script" uid="uid://tljov3bf83cg" path="res://Player.gd" id="13_usbmj"]
 [ext_resource type="Texture2D" uid="uid://c31mf1acadsdv" path="res://Textures/Ground/Ground110_1K-JPG_Color.jpg" id="14_a15gv"]
+[ext_resource type="Texture2D" uid="uid://c5puj0jwgjrvg" path="res://Cabin assets/flame.png" id="14_m4cqx"]
 [ext_resource type="Texture2D" uid="uid://cf4pchpvlc0wc" path="res://Textures/Ground/Ground110_1K-JPG_NormalDX.jpg" id="15_50dpj"]
 [ext_resource type="Shader" uid="uid://cbs5cb8tubg6h" path="res://FernWind.gdshader" id="16_2kyub"]
 [ext_resource type="Texture2D" uid="uid://c6qv7430vdnsv" path="res://Textures/Grass/Grass001_1K-JPG_Color.jpg" id="16_b7j8m"]
@@ -41,6 +44,7 @@ emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
 normal_enabled = true
+normal_scale = 6.15
 normal_texture = ExtResource("2_cw8cn")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpklr"]
@@ -51,6 +55,7 @@ emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
 normal_enabled = true
+normal_scale = 6.93
 normal_texture = ExtResource("4_usbmj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejj41"]
@@ -62,6 +67,7 @@ emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
 normal_enabled = true
+normal_scale = 6.15
 normal_texture = ExtResource("6_teqc5")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3n3ex"]
@@ -72,6 +78,7 @@ emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
 normal_enabled = true
+normal_scale = 6.15
 normal_texture = ExtResource("8_v5ica")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sxd7"]
@@ -82,6 +89,7 @@ emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
 normal_enabled = true
+normal_scale = 6.89
 normal_texture = ExtResource("10_brmr7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iue8w"]
@@ -92,6 +100,7 @@ emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
 normal_enabled = true
+normal_scale = 6.52
 normal_texture = ExtResource("10_brmr7")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lu3s4"]
@@ -246,6 +255,27 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lu3s4")
 
+[sub_resource type="QuadMesh" id="QuadMesh_wp5uw"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wp5uw"]
+lifetime_randomness = 0.5
+gravity = Vector3(0, 0.1, 0)
+scale_min = 0.0
+scale_max = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tymvx"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("14_m4cqx")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_thx5m"]
+material = SubResource("StandardMaterial3D_tymvx")
+size = Vector2(0.02, 0.02)
+
 [sub_resource type="Gradient" id="Gradient_cw8cn"]
 offsets = PackedFloat32Array(0.2, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -286,15 +316,6 @@ _shader_parameters = {
 &"noise_texture": SubResource("NoiseTexture2D_teqc5"),
 &"projection_threshold": null
 }
-
-[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_h3wf8"]
-name = "detailed_grass_-_by_lemstrx"
-scene_file = ExtResource("13_2kyub")
-density = 0.22109866
-cast_shadows = 0
-last_lod = 1
-last_shadow_lod = 1
-lod1_range = 128.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1p4ks"]
 render_priority = 0
@@ -358,7 +379,7 @@ roughness = 1.0
 uv_scale = 0.5
 
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_h3wf8"]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_h3wf8"), SubResource("Terrain3DMeshAsset_m4cqx"), SubResource("Terrain3DMeshAsset_d63ey")])
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_m4cqx"), SubResource("Terrain3DMeshAsset_d63ey")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_231ny"), SubResource("Terrain3DTextureAsset_utie3"), SubResource("Terrain3DTextureAsset_b7j8m"), SubResource("Terrain3DTextureAsset_e3avu")])
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d63ey"]
@@ -437,12 +458,416 @@ directional_shadow_max_distance = 50.0
 [node name="Three Izba Cabins" type="Node3D" parent="." unique_id=2037845405]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057994843, 4.7945247, 0.10060644)
 
-[node name="Cabin Three" type="MeshInstance3D" parent="Three Izba Cabins" unique_id=1643267854]
+[node name="Cabin" type="MeshInstance3D" parent="Three Izba Cabins" unique_id=1643267854]
 transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, 0.99999994, 0, -0.99999994, -1.1920929e-07, 0, 0, 14.882766)
 mesh = SubResource("ArrayMesh_x6b0q")
 
-[node name="EnterDoor" parent="Three Izba Cabins/Cabin Three" unique_id=355685050 instance=ExtResource("8_7p24d")]
+[node name="EnterDoor" parent="Three Izba Cabins/Cabin" unique_id=355685050 instance=ExtResource("8_7p24d")]
 transform = Transform3D(1.0646359e-14, 1.9814028e-07, 4.999999, 5.5720086, -1.9814024e-07, 5.0821977e-21, 2.435602e-07, 4.53292, -2.1855686e-07, 0.10015392, 4.991226, 0.78471464)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Three Izba Cabins/Cabin" unique_id=1178242497]
+transform = Transform3D(-0.002844545, -1.6672244e-07, 0.86907345, 2.1454692e-07, 1.3985691, 1.0376527e-07, -1.7997482, 1.6698601e-07, -0.0013735878, 6.4466534, -0.6413975, 2.366097)
+transparency = 0.72
+mesh = SubResource("QuadMesh_wp5uw")
+
+[node name="Chandaliers" type="Node3D" parent="Three Izba Cabins/Cabin" unique_id=599939723]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, -7.1054274e-15, 0, 7.1054274e-15, 0.9999999, 0, 0, 0)
+
+[node name="Chandalier" parent="Three Izba Cabins/Cabin/Chandaliers" unique_id=1107183115 instance=ExtResource("13_e3avu")]
+transform = Transform3D(0.005, 0, 0, 0, -5.9604643e-10, -0.005, 0, 0.005, -5.9604643e-10, -2.4745905, 3.9423857, 2.5550523)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=16021052]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=1703038721]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=2061718262]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=892470219]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=1704942300]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=1323435454]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=769410264]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=40129125]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=1374788568]
+transform = Transform3D(200, 0, 0, 0, 200.00002, 0, 0, 0, 200.00002, 0, 89.01404, -0.76049805)
+light_color = Color(1, 0.77254903, 0.49019608, 1)
+light_volumetric_fog_energy = 0.0
+omni_range = 4.0
+omni_attenuation = 1.99
+
+[node name="Chandalier2" parent="Three Izba Cabins/Cabin/Chandaliers" unique_id=1337189231 instance=ExtResource("13_e3avu")]
+transform = Transform3D(0.005, 0, 0, 0, -5.9604605e-10, -0.0049999966, 0, 0.0049999966, -5.9604605e-10, -2.9639356, -2.289916, 2.5550518)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=148157399]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1140057268]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=809558680]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1170061683]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1439581490]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1058485079]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=197858674]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1304088412]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=2146072484]
+transform = Transform3D(200, 0, 0, 0, 200.00002, 0, 0, 0, 200.00002, 0, 89.01404, -0.76049805)
+light_color = Color(1, 0.77254903, 0.49019608, 1)
+light_volumetric_fog_energy = 0.0
+omni_range = 4.0
+omni_attenuation = 1.99
+
+[node name="Chandalier4" parent="Three Izba Cabins/Cabin/Chandaliers" unique_id=914779728 instance=ExtResource("13_e3avu")]
+transform = Transform3D(0.005, 0, 0, 0, -5.9604566e-10, -0.0049999934, 0, 0.0049999934, -5.9604566e-10, 3.3896499, -2.2899122, 5.5450764)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=335141439]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=1963483791]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=128145800]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=1836257555]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=304295404]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=459364912]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=1365524958]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=11450061]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=1713031772]
+transform = Transform3D(200, 0, 0, 0, 200.00002, 0, 0, 0, 200.00002, 0, 89.01404, -0.76049805)
+light_color = Color(1, 0.77254903, 0.49019608, 1)
+light_volumetric_fog_energy = 0.0
+omni_range = 4.0
+omni_attenuation = 1.99
+
+[node name="Chandalier3" parent="Three Izba Cabins/Cabin/Chandaliers" unique_id=1388470142 instance=ExtResource("13_e3avu")]
+transform = Transform3D(0.005, 0, 0, 0, -5.9604577e-10, -0.0049999943, 0, 0.0049999943, -5.9604577e-10, 3.3896496, -2.2899084, 2.5550518)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=310115283]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=931417985]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=1896314231]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=801548461]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=1102763026]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=1894321624]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=655415778]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=1980565411]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=515677881]
+transform = Transform3D(200, 0, 0, 0, 200.00002, 0, 0, 0, 200.00002, 0, 89.01404, -0.76049805)
+light_color = Color(1, 0.77254903, 0.49019608, 1)
+light_volumetric_fog_energy = 0.0
+omni_range = 4.0
+omni_attenuation = 1.99
+
+[node name="Chandalier5" parent="Three Izba Cabins/Cabin/Chandaliers" unique_id=374730583 instance=ExtResource("13_e3avu")]
+transform = Transform3D(0.005, 0, 0, 0, -5.960455e-10, -0.004999992, 0, 0.004999992, -5.960455e-10, -3.3670216, -2.4479418, 5.5450764)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1757470448]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1481642806]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=916936234]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=752851407]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1335005031]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1529805918]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1320188819]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1300839142]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=316634880]
+transform = Transform3D(200, 0, 0, 0, 200.00002, 0, 0, 0, 200.00002, 0, 89.01404, -0.76049805)
+light_color = Color(1, 0.77254903, 0.49019608, 1)
+light_volumetric_fog_energy = 0.0
+omni_range = 4.0
+omni_attenuation = 1.99
+
+[node name="Chandalier6" parent="Three Izba Cabins/Cabin/Chandaliers" unique_id=439782738 instance=ExtResource("13_e3avu")]
+transform = Transform3D(0.005, 0, 0, 0, -5.960453e-10, -0.0049999906, 0, 0.0049999906, -5.960453e-10, -2.3154275, 4.2254333, 5.5450764)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=620056807]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=107709798]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=1208400712]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=589905189]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=1591843212]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=1702516900]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=968707700]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=1010189167]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+amount = 3
+preprocess = 1.44
+process_material = SubResource("ParticleProcessMaterial_wp5uw")
+draw_pass_1 = SubResource("QuadMesh_thx5m")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=385849840]
+transform = Transform3D(200, 0, 0, 0, 200.00002, 0, 0, 0, 200.00002, 0, 89.01404, -0.76049805)
+light_color = Color(1, 0.77254903, 0.49019608, 1)
+light_volumetric_fog_energy = 0.0
+omni_range = 4.0
+omni_attenuation = 1.99
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=547362921]
 data_directory = "res://Terrain3D"
