@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn7j3g778kjqb"
-path.s3tc="res://.godot/imported/Log Wall NM.png-d0585881133d086d51adda94c7dba4f9.s3tc.ctex"
+path.s3tc="res://.godot/imported/Log Wall NM.png-7dd7399c17f563a796391a94e4b44eff.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Three Cabins/Textures/Log Wall NM.png"
-dest_files=["res://.godot/imported/Log Wall NM.png-d0585881133d086d51adda94c7dba4f9.s3tc.ctex"]
+source_file="res://Three cabins/Textures/Log Wall NM.png"
+dest_files=["res://.godot/imported/Log Wall NM.png-7dd7399c17f563a796391a94e4b44eff.s3tc.ctex"]
 
 [params]
 

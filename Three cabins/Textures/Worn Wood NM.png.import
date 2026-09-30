@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6bolkfwpf237"
-path.s3tc="res://.godot/imported/Worn Wood NM.png-9190982b1d687a3f82d2a010ce82517d.s3tc.ctex"
+path.s3tc="res://.godot/imported/Worn Wood NM.png-82b81a9fc8391c63c07443babdaabd04.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Three Cabins/Textures/Worn Wood NM.png"
-dest_files=["res://.godot/imported/Worn Wood NM.png-9190982b1d687a3f82d2a010ce82517d.s3tc.ctex"]
+source_file="res://Three cabins/Textures/Worn Wood NM.png"
+dest_files=["res://.godot/imported/Worn Wood NM.png-82b81a9fc8391c63c07443babdaabd04.s3tc.ctex"]
 
 [params]
 
