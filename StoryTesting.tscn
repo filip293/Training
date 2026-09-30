@@ -12,14 +12,23 @@
 [ext_resource type="PackedScene" uid="uid://bnpl1q016rrb7" path="res://Cabin assets/cabin_door.glb" id="8_7p24d"]
 [ext_resource type="Texture2D" uid="uid://cxuosowph5c6p" path="res://Three Cabins/Textures/Weathered Brown Planks NM.png" id="8_v5ica"]
 [ext_resource type="Texture2D" uid="uid://b6bolkfwpf237" path="res://Three Cabins/Textures/Worn Wood NM.png" id="10_brmr7"]
-[ext_resource type="PackedScene" uid="uid://wutcy65cvya6" path="res://Tree.tscn" id="13_50dpj"]
+[ext_resource type="PackedScene" uid="uid://d157vhi0ounb2" path="res://Foliage/Tree/pine_tree_low-poly.glb" id="13_50dpj"]
+[ext_resource type="Shader" uid="uid://b2awe20en8rxl" path="res://TreeWind.gdshader" id="13_u6lov"]
 [ext_resource type="Script" uid="uid://tljov3bf83cg" path="res://Player.gd" id="13_usbmj"]
+[ext_resource type="Texture2D" uid="uid://b1rtg4o8ei5g8" path="res://Foliage/Tree/pine_tree_low-poly_0.png" id="14_231ny"]
 [ext_resource type="Texture2D" uid="uid://c31mf1acadsdv" path="res://Textures/Ground/Ground110_1K-JPG_Color.jpg" id="14_a15gv"]
 [ext_resource type="Texture2D" uid="uid://cf4pchpvlc0wc" path="res://Textures/Ground/Ground110_1K-JPG_NormalDX.jpg" id="15_50dpj"]
+[ext_resource type="Shader" uid="uid://cbs5cb8tubg6h" path="res://FernWind.gdshader" id="16_2kyub"]
 [ext_resource type="Texture2D" uid="uid://c6qv7430vdnsv" path="res://Textures/Grass/Grass001_1K-JPG_Color.jpg" id="16_b7j8m"]
 [ext_resource type="Texture2D" uid="uid://y1wh1wfnq2a8" path="res://Textures/Mud/Ground036_1K-JPG_Color.jpg" id="17_a15gv"]
+[ext_resource type="Texture2D" uid="uid://dvjp4fdpu75l3" path="res://Foliage/Fern2/3d_fern_-_01_0.png" id="17_dwfe2"]
 [ext_resource type="Texture2D" uid="uid://dpvx34cymhts0" path="res://Textures/Grass/Grass001_1K-JPG_NormalGL.jpg" id="17_u6lov"]
 [ext_resource type="Texture2D" uid="uid://bw0fgt7gsevyd" path="res://Textures/Mud/Ground036_1K-JPG_NormalDX.jpg" id="18_50dpj"]
+[ext_resource type="PackedScene" uid="uid://wqaki0tbwsh8" path="res://Foliage/Fern2/3d_fern_-_01.glb" id="18_e3avu"]
+
+[sub_resource type="Environment" id="Environment_1p4ks"]
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.9079417, 0.9079417, 0.90794164, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qwcq"]
 resource_name = "Log Wall 3"
@@ -275,10 +284,40 @@ _shader_parameters = {
 &"projection_threshold": null
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_33lij"]
+render_priority = 0
+shader = ExtResource("13_u6lov")
+shader_parameter/texture_albedo = ExtResource("14_231ny")
+shader_parameter/wind_speed = 0.400000019
+shader_parameter/wind_strength = 0.2
+shader_parameter/leaf_flutter_strength = 0.08
+shader_parameter/trunk_anchor_height = 1.0000000475
+shader_parameter/wind_direction = Vector3(1, 0, 0.5)
+
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_h3wf8"]
 name = "Tree"
 scene_file = ExtResource("13_50dpj")
+density = 0.086659364
+material_override = SubResource("ShaderMaterial_33lij")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1p4ks"]
+render_priority = 0
+shader = ExtResource("16_2kyub")
+shader_parameter/texture_albedo = ExtResource("17_dwfe2")
+shader_parameter/wind_speed = 0.78000003705
+shader_parameter/wind_strength = 0.15
+shader_parameter/frond_flutter = 0.0
+shader_parameter/wind_direction = Vector3(1, 0, 0.5)
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_m4cqx"]
+name = "3d_fern_-_01"
+id = 1
+scene_file = ExtResource("18_e3avu")
 density = 0.01
+material_override = SubResource("ShaderMaterial_1p4ks")
 last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
@@ -307,12 +346,24 @@ normal_depth = 1.672
 uv_scale = 0.6
 
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_h3wf8"]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_h3wf8")])
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_h3wf8"), SubResource("Terrain3DMeshAsset_m4cqx")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_231ny"), SubResource("Terrain3DTextureAsset_utie3"), SubResource("Terrain3DTextureAsset_b7j8m")])
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ftei"]
 
 [node name="Node3D" type="Node3D" unique_id=1703375110]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=116942088]
+environment = SubResource("Environment_1p4ks")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=554432492]
+transform = Transform3D(0.9524741, -0.22977744, 0.19998841, -0.3046195, -0.7184605, 0.6253171, 0, -0.65651876, -0.7543097, 0, 34.120434, 0)
+light_color = Color(1, 1, 0.9490196, 1)
+light_energy = 0.6
+shadow_enabled = true
+shadow_opacity = 0.9
+directional_shadow_mode = 0
+directional_shadow_max_distance = 50.0
 
 [node name="Three Izba Cabins" type="Node3D" parent="." unique_id=2037845405]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057994843, 4.7945247, 0.10060644)
@@ -335,12 +386,8 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.766396, 19.759678, 90.369774)
 script = ExtResource("13_usbmj")
 
-[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1305443085]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6220186, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=635669612]
 shape = SubResource("CapsuleShape3D_5ftei")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=554432492]
-transform = Transform3D(0.9524741, -0.22977744, 0.19998841, -0.3046195, -0.7184605, 0.6253171, 0, -0.65651876, -0.7543097, 0, 34.120434, 0)
-shadow_enabled = true
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1305443085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6220188, -0.39772797)

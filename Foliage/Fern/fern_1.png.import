@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt74sj3roly4s"
-path.s3tc="res://.godot/imported/T_HP_Tree_Trunk.PNG-7df9680f66a832918574d00478191c82.s3tc.ctex"
+uid="uid://bbyfj5t5wh6ah"
+path.s3tc="res://.godot/imported/fern_1.png-dcfb98a86a75280ff781ccc663d94c54.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "a751a845a6b9446a9c4de1c94de6d6c7"
+}
 
 [deps]
 
-source_file="res://Foliage/Tree/Textures/T_HP_Tree_Trunk.PNG"
-dest_files=["res://.godot/imported/T_HP_Tree_Trunk.PNG-7df9680f66a832918574d00478191c82.s3tc.ctex"]
+source_file="res://Foliage/Fern/fern_1.png"
+dest_files=["res://.godot/imported/fern_1.png-dcfb98a86a75280ff781ccc663d94c54.s3tc.ctex"]
 
 [params]
 

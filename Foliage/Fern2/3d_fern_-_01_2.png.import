@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl3ycqdpuq6c1"
-path.s3tc="res://.godot/imported/T_HP_Tree_Trunk_normal.PNG-d48eb2fad9ccbbf448774a856008d80d.s3tc.ctex"
+uid="uid://dfdchg7wwhm1l"
+path.s3tc="res://.godot/imported/3d_fern_-_01_2.png-7d356614c1714bcf843c02f7ce1e67e4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "b6fc1aa80935cdf4bc1a2fb734afc3c7"
+}
 
 [deps]
 
-source_file="res://Foliage/Tree/Textures/T_HP_Tree_Trunk_normal.PNG"
-dest_files=["res://.godot/imported/T_HP_Tree_Trunk_normal.PNG-d48eb2fad9ccbbf448774a856008d80d.s3tc.ctex"]
+source_file="res://Foliage/Fern2/3d_fern_-_01_2.png"
+dest_files=["res://.godot/imported/3d_fern_-_01_2.png-7d356614c1714bcf843c02f7ce1e67e4.s3tc.ctex"]
 
 [params]
 
@@ -27,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://Foliage/Tree/Textures/T_HP_Tree_Trunk_normal.PNG"
+roughness/src_normal="res://Foliage/Fern2/3d_fern_-_01_2.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export_group("Movement Settings")
-@export var max_speed: float = 6.0
+@export var max_speed: float = 2.0
 @export var acceleration: float = 30.0
 @export var deceleration: float = 40.0
 @export var air_control: float = 12.0

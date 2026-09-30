@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds8ox5x8ffbhb"
-path.s3tc="res://.godot/imported/T_HP_Tree_Leaf.PNG-57fe9cab53a76551703b87ba4633f744.s3tc.ctex"
+uid="uid://b1rtg4o8ei5g8"
+path.s3tc="res://.godot/imported/pine_tree_low-poly_0.png-d812d9e9666d29e2017b3cd53d9825a9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "7caa1fa6bae85dac3eb2a41a1619107f"
+}
 
 [deps]
 
-source_file="res://Foliage/Tree/Textures/T_HP_Tree_Leaf.PNG"
-dest_files=["res://.godot/imported/T_HP_Tree_Leaf.PNG-57fe9cab53a76551703b87ba4633f744.s3tc.ctex"]
+source_file="res://Foliage/Tree/pine_tree_low-poly_0.png"
+dest_files=["res://.godot/imported/pine_tree_low-poly_0.png-d812d9e9666d29e2017b3cd53d9825a9.s3tc.ctex"]
 
 [params]
 
