@@ -1312,7 +1312,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057994843, 4.7945247, 0.10
 
 [node name="Cabin" type="MeshInstance3D" parent="Three Izba Cabins" unique_id=1643267854]
 transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, 0.99999994, 0, -0.99999994, -1.1920929e-07, 0, 0, 14.882766)
-transparency = 1.0
 visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_x6b0q")
 
