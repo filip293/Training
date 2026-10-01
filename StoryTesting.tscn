@@ -3241,10 +3241,11 @@ mesh = SubResource("ArrayMesh_6r6jn")
 
 [node name="Trees" type="Node3D" parent="." unique_id=1759577267]
 script = ExtResource("57_wk0uk")
-visibility_begin = 10.0
-visibility_begin_margin = 20.0
-visibility_end = 50.0
-visibility_end_margin = 60.0
+apply_in_editor = null
+visibility_begin = 0.0
+visibility_begin_margin = 0.0
+visibility_end = 30.0
+visibility_end_margin = 20.0
 
 [node name="5 scale tree" type="Node3D" parent="Trees" unique_id=7525478]
 
