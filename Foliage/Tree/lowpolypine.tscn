@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cff5yunrpv84k"]
+
+[ext_resource type="PackedScene" uid="uid://d157vhi0ounb2" path="res://Foliage/Tree/pine_tree_low-poly.glb" id="1_3sesq"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3sesq"]
+points = PackedVector3Array(-0.21112633, -0.2255215, -0.12779927, 0.25846732, 0.12658179, 0.10735381, 0.14102294, 0.12658179, 2.1027706, -0.09368195, 0.24407214, -0.12779927, -0.21112633, 0.009275317, 2.1027706, 0.14102294, -0.108123094, 2.1027706, 0.14102294, -0.2255215, -0.12779927, -0.21112633, 0.12658179, 1.7503685, -0.21112633, -0.108123094, 2.1027706, 0.14102294, 0.24407214, -0.12779927, -0.21112633, 0.12658179, -0.12779927, 0.25846732, -0.108123094, -0.12779927, 0.023670495, -0.2255215, 0.22482115, -0.09368195, 0.12658179, 2.1027706, 0.14102294, 0.24407214, 0.10735381, -0.09368195, 0.24407214, 0.10735381, 0.25846732, -0.108123094, 0.10735381, 0.14102294, -0.2255215, 0.10735381, -0.21112633, -0.2255215, 0.10735381, 0.25846732, 0.12658179, -0.12779927)
+
+[node name="Sketchfab_Scene" unique_id=386486950 instance=ExtResource("1_3sesq")]
+
+[node name="Pine_s_1__Pine_s_1_Material_0" parent="Sketchfab_model/Pine_Low-poly_1_fbx/RootNode/Pine_s_1_" parent_id_path=PackedInt32Array(560730952) index="0" unique_id=265942713]
+visibility_range_end = 30.0
+visibility_range_end_margin = 5.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/Pine_Low-poly_1_fbx/RootNode/Pine_s_1_/Pine_s_1__Pine_s_1_Material_0" index="0" unique_id=1613496877]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Pine_Low-poly_1_fbx/RootNode/Pine_s_1_/Pine_s_1__Pine_s_1_Material_0/StaticBody3D" index="0" unique_id=762402978]
+shape = SubResource("ConvexPolygonShape3D_3sesq")
