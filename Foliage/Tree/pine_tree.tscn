@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dbtqj6p2fmh3b"]
+
+[ext_resource type="PackedScene" uid="uid://cmh4to8d730lp" path="res://Foliage/Tree/pine_tree.glb" id="1_e2a8q"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3hnax"]
+height = 2.9937742
+radius = 0.09837505
+
+[node name="Sketchfab_Scene" unique_id=270278370 instance=ExtResource("1_e2a8q")]
+
+[node name="Leaves_001_Leavs_0" parent="Sketchfab_model/4ae49a7eb2b34ec88b7dd664e89d6dd8_fbx/RootNode/Leaves_001" parent_id_path=PackedInt32Array(495151571) index="0" unique_id=1924932401]
+visibility_range_begin = 10.0
+visibility_range_begin_margin = 20.0
+visibility_range_end = 25.0
+visibility_range_end_margin = 30.0
+visibility_range_fade_mode = 1
+
+[node name="Trank_001_Trank_0" parent="Sketchfab_model/4ae49a7eb2b34ec88b7dd664e89d6dd8_fbx/RootNode/Trank_001" parent_id_path=PackedInt32Array(354779425) index="0" unique_id=188201691]
+visibility_range_begin = 10.0
+visibility_range_begin_margin = 20.0
+visibility_range_end = 25.0
+visibility_range_end_margin = 30.0
+visibility_range_fade_mode = 1
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/4ae49a7eb2b34ec88b7dd664e89d6dd8_fbx/RootNode/Trank_001/Trank_001_Trank_0" index="0" unique_id=628735321]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.031966686, -0.008200832, 1.4968871)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/4ae49a7eb2b34ec88b7dd664e89d6dd8_fbx/RootNode/Trank_001/Trank_001_Trank_0/StaticBody3D" index="0" unique_id=547837926]
+shape = SubResource("CylinderShape3D_3hnax")

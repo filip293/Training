@@ -56,11 +56,10 @@
 [ext_resource type="AudioStream" uid="uid://cl2tful84on1h" path="res://Sounds/FootstepGround/Ground3.wav" id="33_nm4bd"]
 [ext_resource type="AudioStream" uid="uid://c2xk63qjnjcte" path="res://Sounds/FootstepGround/Ground4.wav" id="34_s3656"]
 [ext_resource type="AudioStream" uid="uid://cvvx151i47c8r" path="res://Sounds/FootstepGround/Ground5.wav" id="35_iy4ep"]
-[ext_resource type="PackedScene" uid="uid://d157vhi0ounb2" path="res://Foliage/Tree/pine_tree_low-poly.glb" id="57_u6561"]
 [ext_resource type="Script" uid="uid://bhskjcylx2xt4" path="res://VisRange.gd" id="57_wk0uk"]
+[ext_resource type="PackedScene" uid="uid://dbtqj6p2fmh3b" path="res://Foliage/Tree/pine_tree.tscn" id="59_wk0uk"]
 
 [sub_resource type="Environment" id="Environment_1p4ks"]
-volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.9079417, 0.9079417, 0.90794164, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qwcq"]
@@ -1294,550 +1293,6 @@ points = PackedVector3Array(0.100681454, 0.87724, 0.7061976, -0.053078856, -1.20
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ftei"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_2xq4v"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_yif25"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_002_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("mKYXPEf3yzzqrDg+AN5oPpimFzwA3mg+6qw4Pkf3yzyQfDQ8iWlmPpimFzxH98s8mKYXPADeaD6QfDQ84JrfPJB8NDzgmt886qw4Pkf3yzyYphc8R/fLPJLfNj7gmt88kt82PuCa3zzqrDg+AN5oPuqsOD5H98s8kt82PolpZj6S3zY+iWlmPpimFzwA3mg+6qw4PgDeaD6QfDQ8iWlmPpimFzwA3mg+mKYXPEf3yzyYphc8AN5oPpimFzxH98s8kHw0POCa3zyS3zY+iWlmPpLfNj7gmt88kHw0PIlpZj6Yphc8R/fLPOqsOD5H98s8mKYXPEf3yzzqrDg+R/fLPOqsOD5H98s86qw4PgDeaD7qrDg+R/fLPOqsOD4A3mg+6qw4PgDeaD6Yphc8AN5oPuqsOD4A3mg+mKYXPADeaD4="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6v/P7gr/3+3q/8/uCv/f7er/z+4K/9/t6v/P/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/7/I2pH1P9//v8jakfU/3/+/yNqR9T/f/7/I2r/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_2xq4v")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_wqjxq"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_j2qos"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_003_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("vmkdPxOxhzsSgVA/HlKAPr5pHT8eUoA+EoFQPxOxhztI8B0/Xad9Pr5pHT8TsYc7vmkdPx5SgD5I8B0/mE3nO0jwHT+YTec7EoFQPxOxhzu+aR0/E7GHO4j6Tz+YTec7iPpPP5hN5zsSgVA/HlKAPhKBUD8TsYc7iPpPP12nfT6I+k8/Xad9Pr5pHT8eUoA+EoFQPx5SgD5I8B0/Xad9Pr5pHT8eUoA+vmkdPxOxhzu+aR0/HlKAPr5pHT8TsYc7SPAdP5hN5zuI+k8/Xad9Poj6Tz+YTec7SPAdP12nfT6+aR0/E7GHOxKBUD8TsYc7vmkdPxOxhzsSgVA/E7GHOxKBUD8TsYc7EoFQPx5SgD4SgVA/E7GHOxKBUD8eUoA+EoFQPx5SgD6+aR0/HlKAPhKBUD8eUoA+vmkdPx5SgD4="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6sAQLgr/3+3q/8/uCv/f7erAEC4K/9/t6v/P/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/7/I2pH1P9//f/bFUfU/3/+/yNqR9T/f/3/2xX/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wqjxq")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_3jns6"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_lobo7"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_004_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("FE3VPvPOyjt+oxo/Hzd8PhRN1T4fN3w+fqMaP/POyjvQSdY+8E15PhRN1T7zzso7FE3VPh83fD7QSdY+qvkTPNBJ1j6q+RM8fqMaP/POyjsUTdU+887KOx4lGj+q+RM8HiUaP6r5Ezx+oxo/Hzd8Pn6jGj/zzso7HiUaP/BNeT4eJRo/8E15PhRN1T4fN3w+fqMaPx83fD7QSdY+8E15PhRN1T4fN3w+FE3VPvPOyjsUTdU+Hzd8PhRN1T7zzso70EnWPqr5EzweJRo/8E15Ph4lGj+q+RM80EnWPvBNeT4UTdU+887KO36jGj/zzso7FE3VPvPOyjt+oxo/887KO36jGj/zzso7fqMaPx83fD5+oxo/887KO36jGj8fN3w+fqMaPx83fD4UTdU+Hzd8Pn6jGj8fN3w+FE3VPh83fD4="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6v/P7gr/3+3q/8/uCv/f7er/z+4K/9/t6v/P/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/7/I2pH1P9//v8jakfU/3/+/yNqR9T/f/7/I2r/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_3jns6")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_hmbi7"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_nrrr7"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_005_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("EqdRP5ZQkju60n0/1QqBPhKnUT/VCoE+utJ9P5ZQkjtiG1I/UxV/PhKnUT+WUJI7EqdRP9UKgT5iG1I/eFnyO2IbUj94WfI7utJ9P5ZQkjsSp1E/llCSO2pefT94WfI7al59P3hZ8ju60n0/1QqBPrrSfT+WUJI7al59P1MVfz5qXn0/UxV/PhKnUT/VCoE+utJ9P9UKgT5iG1I/UxV/PhKnUT/VCoE+EqdRP5ZQkjsSp1E/1QqBPhKnUT+WUJI7YhtSP3hZ8jtqXn0/UxV/PmpefT94WfI7YhtSP1MVfz4Sp1E/llCSO7rSfT+WUJI7EqdRP5ZQkju60n0/llCSO7rSfT+WUJI7utJ9P9UKgT660n0/llCSO7rSfT/VCoE+utJ9P9UKgT4Sp1E/1QqBPrrSfT/VCoE+EqdRP9UKgT4="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6v/P7gr/3+3q/8/uCv/f7er/z+4K/9/t6v/P/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/7/I2pH1P9//f8jakfU/3/+/yNqR9T/f/3/I2r/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_hmbi7")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_6nhf3"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_4rfrm"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_006_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("2dJMPkwDgz7OINA+tEQBP9nSTD60RAE/ziDQPkwDgz6k/04+d4MAP9nSTD5MA4M+2dJMPrREAT+k/04+yoWEPqT/Tj7KhYQ+ziDQPkwDgz7Z0kw+TAODPm0Kzz7KhYQ+bQrPPsqFhD7OINA+tEQBP84g0D5MA4M+bQrPPneDAD9tCs8+d4MAP9nSTD60RAE/ziDQPrREAT+k/04+d4MAP9nSTD60RAE/2dJMPkwDgz7Z0kw+tEQBP9nSTD5MA4M+pP9OPsqFhD5tCs8+d4MAP20Kzz7KhYQ+pP9OPneDAD/Z0kw+TAODPs4g0D5MA4M+2dJMPkwDgz7OINA+TAODPs4g0D5MA4M+ziDQPrREAT/OINA+TAODPs4g0D60RAE/ziDQPrREAT/Z0kw+tEQBP84g0D60RAE/2dJMPrREAT8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6v/P7gr/3+3qwBAuCv/f7er/z+4K/9/t6sAQP9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/3/2xVH1P9//v8jakfU/3/9/9sVR9T/f/7/I2r/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_6nhf3")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_nitqs"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_5d7pg"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_007_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("EJSNO4Gkgj6UTTc+IA8BPxCUjTsgDwE/lE03PoGkgj5Adsg79E0APxCUjTuBpII+EJSNOyAPAT9Adsg70CaEPkB2yDvQJoQ+lE03PoGkgj4QlI07gaSCPox2NT7QJoQ+jHY1PtAmhD6UTTc+IA8BP5RNNz6BpII+jHY1PvRNAD+MdjU+9E0APxCUjTsgDwE/lE03PiAPAT9Adsg79E0APxCUjTsgDwE/EJSNO4Gkgj4QlI07IA8BPxCUjTuBpII+QHbIO9AmhD6MdjU+9E0AP4x2NT7QJoQ+QHbIO/RNAD8QlI07gaSCPpRNNz6BpII+EJSNO4Gkgj6UTTc+gaSCPpRNNz6BpII+lE03PiAPAT+UTTc+gaSCPpRNNz4gDwE/lE03PiAPAT8QlI07IA8BP5RNNz4gDwE/EJSNOyAPAT8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6v/P7gr/3+3q/8/uCv/f7er/z+4K/9/t6v/P/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/7/I2pH1P9//v8jakfU/3/+/yNqR9T/f/7/I2r/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_nitqs")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_jrabk"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_4puy5"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_008_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("Uv8cP6rzgj7CoU8/34UBP1L/HD/fhQE/wqFPP6rzgj6phB0/xcMAP1L/HD+q84I+Uv8cP9+FAT+phB0/2HeEPqmEHT/Yd4Q+wqFPP6rzgj5S/xw/qvOCPmwcTz/Yd4Q+bBxPP9h3hD7CoU8/34UBP8KhTz+q84I+bBxPP8XDAD9sHE8/xcMAP1L/HD/fhQE/wqFPP9+FAT+phB0/xcMAP1L/HD/fhQE/Uv8cP6rzgj5S/xw/34UBP1L/HD+q84I+qYQdP9h3hD5sHE8/xcMAP2wcTz/Yd4Q+qYQdP8XDAD9S/xw/qvOCPsKhTz+q84I+Uv8cP6rzgj7CoU8/qvOCPsKhTz+q84I+wqFPP9+FAT/CoU8/qvOCPsKhTz/fhQE/wqFPP9+FAT9S/xw/34UBP8KhTz/fhQE/Uv8cP9+FAT8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6v/P7gr/3+3q/8/uCv/f7er/z+4K/9/t6v/P/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/7/I2pH1P9//v8jakfU/3/+/yNqR9T/f/7/I2r/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_jrabk")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_abi8l"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_71841"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_009_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("sgnSPjEUhD6UDhw/H8sBP7IJ0j4fywE/lA4cPzEUhD58FtM+6wkBP7IJ0j4xFIQ+sgnSPh/LAT98FtM+nZaFPnwW0z6dloU+lA4cPzEUhD6yCdI+MRSEPi6IGz+dloU+LogbP52WhT6UDhw/H8sBP5QOHD8xFIQ+LogbP+sJAT8uiBs/6wkBP7IJ0j4fywE/lA4cPx/LAT98FtM+6wkBP7IJ0j4fywE/sgnSPjEUhD6yCdI+H8sBP7IJ0j4xFIQ+fBbTPp2WhT4uiBs/6wkBPy6IGz+dloU+fBbTPusJAT+yCdI+MRSEPpQOHD8xFIQ+sgnSPjEUhD6UDhw/MRSEPpQOHD8xFIQ+lA4cPx/LAT+UDhw/MRSEPpQOHD8fywE/lA4cPx/LAT+yCdI+H8sBP5QOHD8fywE/sgnSPh/LAT8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6sAQLgr/3+3q/8/uCv/f7erAEC4K/9/t6v/P/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/7/2xVH1P9//v/bFUfU/3/+/9sVR9T/f/7/2xX/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_abi8l")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_a87mv"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_j2mqo"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_010_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("gtVSP04YiD7QDHw/1WT+PoLVUj/VZP4+0Ax8P04YiD4KQlM/U/78PoLVUj9OGIg+gtVSP9Vk/j4KQlM/zH6JPgpCUz/Mfok+0Ax8P04YiD6C1VI/ThiIPkigez/Mfok+SKB7P8x+iT7QDHw/1WT+PtAMfD9OGIg+SKB7P1P+/D5IoHs/U/78PoLVUj/VZP4+0Ax8P9Vk/j4KQlM/U/78PoLVUj/VZP4+gtVSP04YiD6C1VI/1WT+PoLVUj9OGIg+CkJTP8x+iT5IoHs/U/78Pkigez/Mfok+CkJTP1P+/D6C1VI/ThiIPtAMfD9OGIg+gtVSP04YiD7QDHw/ThiIPtAMfD9OGIg+0Ax8P9Vk/j7QDHw/ThiIPtAMfD/VZP4+0Ax8P9Vk/j6C1VI/1WT+PtAMfD/VZP4+gtVSP9Vk/j4="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6v/P7gr/3+3q/8/uCv/f7er/z+4K/9/t6v/P/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/3/I2pH1P9//v/bFUfU/3/9/yNqR9T/f/7/2xX/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_a87mv")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_tdsab"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_26s0k"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_011_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("sgpOPhnyAj9Vec8+iP1CPzZ+TT6I/UI/k7/PPhnyAj++pU8+sEFCP7IKTj4Z8gI/Nn5NPoj9Qj86MlA+8a0DPzoyUD7xrQM/k7/PPhnyAj+yCk4+GfICP8irzj7xrQM/yKvOPvGtAz9Vec8+iP1CP5O/zz4Z8gI/imXOPrBBQj+KZc4+sEFCPzZ+TT6I/UI/VXnPPoj9Qj++pU8+sEFCPzZ+TT6I/UI/sgpOPhnyAj82fk0+iP1CP7IKTj4Z8gI/OjJQPvGtAz+KZc4+sEFCP8irzj7xrQM/vqVPPrBBQj+yCk4+GfICP5O/zz4Z8gI/sgpOPhnyAj+Tv88+GfICP5O/zz4Z8gI/VXnPPoj9Qj+Tv88+GfICP1V5zz6I/UI/VXnPPoj9Qj82fk0+iP1CP1V5zz6I/UI/Nn5NPoj9Qj8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/46o2Qbgr/3/iqsc+uCv/f+CqOkG4K/9/26q9Pv9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f5D9jWpH1P9/jv1xFUfU/3+I/Y9qR9T/f3r9bRX/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_tdsab")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_vhgab"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_0vxym"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_012_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("MCaUOl8WBD+S3Dg+BrVEPy5QlzmHokQ/3YA5Pl47BD/Ggws7Q/5DPzAmlDpfFgQ/LlCXOYeiRD9Y5UM7TbwEP1jlQztNvAQ/3YA5Pl47BD8wJpQ6XxYEP5yZNz5L4QQ/nJk3PkvhBD+S3Dg+BrVEP92AOT5eOwQ/Mvo2PsIQRD8y+jY+whBEPy5QlzmHokQ/ktw4Pga1RD/Ggws7Q/5DPy5QlzmHokQ/MCaUOl8WBD8uUJc5h6JEPzAmlDpfFgQ/WOVDO028BD8y+jY+whBEP5yZNz5L4QQ/xoMLO0P+Qz8wJpQ6XxYEP92AOT5eOwQ/MCaUOl8WBD/dgDk+XjsEP92AOT5eOwQ/ktw4Pga1RD/dgDk+XjsEP5LcOD4GtUQ/ktw4Pga1RD8uUJc5h6JEP5LcOD4GtUQ/LlCXOYeiRD8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////6L/0L//////sf/Yv//////G/+K//////43/xr+4K/9/36egRbgr/38PqKY6uCv/f9SnsEW4K/9/8qd6Ov9/gj15/4pA/3+CPXf/jED/f4I9ef+KQP9/gj13/4xAR9T/f1v19GtH1P9/zfTyE0fU/3859fprR9T/f3f04xP/f3zCcv8hQP9/fMJw/yJA/398wnL/IUD/f3zCb/8iQAAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f6D/LkD/f/9/sP8nQP9//3+L/zlA/3//f8X/HED/fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_vhgab")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_duw0v"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_gh1rf"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_013_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("czEeP0w/Aj9HOFA/oO9AP3MxHj+g70A/RzhQP0w/Aj8wtR4/pTFAP3MxHj9MPwI/czEeP6DvQD8wtR4/Sv0CPzC1Hj9K/QI/RzhQP0w/Aj9zMR4/TD8CP4q0Tz9K/QI/irRPP0r9Aj9HOFA/oO9AP0c4UD9MPwI/irRPP6UxQD+KtE8/pTFAP3MxHj+g70A/RzhQP6DvQD8wtR4/pTFAP3MxHj+g70A/czEeP0w/Aj9zMR4/oO9AP3MxHj9MPwI/MLUeP0r9Aj+KtE8/pTFAP4q0Tz9K/QI/MLUeP6UxQD9zMR4/TD8CP0c4UD9MPwI/czEeP0w/Aj9HOFA/TD8CP0c4UD9MPwI/RzhQP6DvQD9HOFA/TD8CP0c4UD+g70A/RzhQP6DvQD9zMR4/oO9AP0c4UD+g70A/czEeP6DvQD8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6v/P7gr/3+3qwBAuCv/f7er/z+4K/9/t6sAQP9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/3/2xVH1P9//v/bFUfU/3/9/9sVR9T/f/7/2xX/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_duw0v")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_by4nv"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_330js"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_014_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("zhHVPqaOAj8uERs/1CpAP84R1T7UKkA/LhEbP6aOAj9pEdY+GnA/P84R1T6mjgI/zhHVPtQqQD9pEdY+XkkDP2kR1j5eSQM/LhEbP6aOAj/OEdU+po4CP16RGj9eSQM/XpEaP15JAz8uERs/1CpAPy4RGz+mjgI/XpEaPxpwPz9ekRo/GnA/P84R1T7UKkA/LhEbP9QqQD9pEdY+GnA/P84R1T7UKkA/zhHVPqaOAj/OEdU+1CpAP84R1T6mjgI/aRHWPl5JAz9ekRo/GnA/P16RGj9eSQM/aRHWPhpwPz/OEdU+po4CPy4RGz+mjgI/zhHVPqaOAj8uERs/po4CPy4RGz+mjgI/LhEbP9QqQD8uERs/po4CPy4RGz/UKkA/LhEbP9QqQD/OEdU+1CpAPy4RGz/UKkA/zhHVPtQqQD8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6v/P7gr/3+3qwBAuCv/f7er/z+4K/9/t6sAQP9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/7/2xVH1P9//f8jakfU/3/+/9sVR9T/f/3/I2r/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_by4nv")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_1u42p"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_bkbrm"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_015_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("JJ5RP1GiAj/evX0/HSBBPySeUT8dIEE/3r19P1GiAj94EVI/A4NAPySeUT9RogI/JJ5RPx0gQT94EVI/bD8DP3gRUj9sPwM/3r19P1GiAj8knlE/UaICP4hKfT9sPwM/iEp9P2w/Az/evX0/HSBBP969fT9RogI/iEp9PwKDQD+ISn0/AoNAPySeUT8dIEE/3r19Px0gQT94EVI/A4NAPySeUT8dIEE/JJ5RP1GiAj8knlE/HSBBPySeUT9RogI/eBFSP2w/Az+ISn0/AoNAP4hKfT9sPwM/eBFSPwODQD8knlE/UaICP969fT9RogI/JJ5RP1GiAj/evX0/UaICP969fT9RogI/3r19Px0gQT/evX0/UaICP969fT8dIEE/3r19Px0gQT8knlE/HSBBP969fT8dIEE/JJ5RPx0gQT8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/p6fyRbgr/3+npw06uCv/f5qnBEa4K/9/h6feOf9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/fxn0K2xH1P9/GvTTE0fU/3/18zFsR9T/f73zxBP/f3zC////P/9/fML+//8//398wv///z//f3zC/v//PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f/7//z//f/9//v//P/9//3////8//3//f/7//z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_1u42p")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_5j3pv"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_qo5cw"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_016_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("R68eP6kLQj/3BFA/qop+P0evHj+qin4/9wRQP6kLQj/ZEh8/V9N9P0evHj+pC0I/R68eP6qKfj/ZEh8//8JCP9kSHz//wkI/9wRQP6kLQj9Hrx4/qQtCP2WhTz//wkI/ZaFPP//CQj/3BFA/qop+P/cEUD+pC0I/ZaFPP1fTfT9loU8/V9N9P0evHj+qin4/9wRQP6qKfj/ZEh8/V9N9P0evHj+qin4/R68eP6kLQj9Hrx4/qop+P0evHj+pC0I/2RIfP//CQj9loU8/V9N9P2WhTz//wkI/2RIfP1fTfT9Hrx4/qQtCP/cEUD+pC0I/R68eP6kLQj/3BFA/qQtCP/cEUD+pC0I/9wRQP6qKfj/3BFA/qQtCP/cEUD+qin4/9wRQP6qKfj9Hrx4/qop+P/cEUD+qin4/R68eP6qKfj8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/t6sAQLgr/3+3q/8/uCv/f7erAEC4K/9/t6v/P/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f/7/I2pH1P9//f/bFUfU/3/+/yNqR9T/f/3/2xX/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_5j3pv")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_8kem4"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_upaf2"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_017_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("qCLZPuoCQT+XfBs/Kot+P6gi2T4qi34/V1AbP+SWQT/UNto+54x9P6gi2T7qAkE/qCLZPiqLfj/UNto+LQFCP9Q22j4tAUI/V1AbP+SWQT+oItk+6gJBP0HGGj8nlUI/QcYaPyeVQj+XfBs/Kot+P1dQGz/klkE/gfIaP+eMfT+B8ho/54x9P6gi2T4qi34/l3wbPyqLfj/UNto+54x9P6gi2T4qi34/qCLZPuoCQT+oItk+Kot+P6gi2T7qAkE/1DbaPi0BQj+B8ho/54x9P0HGGj8nlUI/1DbaPueMfT+oItk+6gJBP1dQGz/klkE/qCLZPuoCQT9XUBs/5JZBP1dQGz/klkE/l3wbPyqLfj9XUBs/5JZBP5d8Gz8qi34/l3wbPyqLfj+oItk+Kot+P5d8Gz8qi34/qCLZPiqLfj8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////8/+Z7//////UP+nv/////////+//////yT+Eb+4K/9/4KOFNLgr/3/Lo5lLuCv/f8qjZTS4K/9/k6PqS/9/gj2m/mVB/3+CPaP+aEH/f4I9pv5lQf9/gj2j/mhBR9T/f2Do0xFH1P9/H+g3bkfU/38e6MgRR9T/f3jnU27/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f8f+m0D/f/9/Sv9ZQP9//38W/vRA/3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_8kem4")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_fbsrv"]
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"format": 34359742465,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEABQAAAAIABAAFAAIABQAGAAAABgADAAAABwABAAMABgAHAAMABwAEAAEACAAGAAUACQAEAAcACgAHAAYACgAJAAcACAAKAAYACQALAAQACwAFAAQACgALAAkACwAIAAUACgAIAAsA"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7ey7Yvn+AJz98XQC7ey7YvoCAJ798XQC7eS7YPoCAJ798XQC767vTvj6JIz80RHI88bvTPkCJI780RHI867vTvkCJI780RHI88bvTPj6JIz80RHI8")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_6r6jn"]
-resource_name = "Sketchfab_Scene_Vintage Rugs_018_Vintage Rugs_0"
-_surfaces = [{
-"aabb": AABB(-0.42222962, -0.6543045, -0.012828072, 0.8444592, 1.308609, 0.02761484),
-"attribute_data": PackedByteArray("qlNRP/NYQj/4VX0/eER+PwoAUT94RH4/mKl9P/NYQj/vc1E/m6Z9P6pTUT/zWEI/CgBRP3hEfj+Qx1E/0vZCP5DHUT/S9kI/mKl9P/NYQj+qU1E/81hCP7Y1fT/S9kI/tjV9P9L2Qj/4VX0/eER+P5ipfT/zWEI/FuJ8P5umfT8W4nw/m6Z9PwoAUT94RH4/+FV9P3hEfj/vc1E/m6Z9PwoAUT94RH4/qlNRP/NYQj8KAFE/eER+P6pTUT/zWEI/kMdRP9L2Qj8W4nw/m6Z9P7Y1fT/S9kI/73NRP5umfT+qU1E/81hCP5ipfT/zWEI/qlNRP/NYQj+YqX0/81hCP5ipfT/zWEI/+FV9P3hEfj+YqX0/81hCP/hVfT94RH4/+FV9P3hEfj8KAFE/eER+P/hVfT94RH4/CgBRP3hEfj8="),
-"format": 34359742487,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
-"material": SubResource("StandardMaterial3D_h6jn1"),
-"name": "Vintage_Rugs",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 40,
-"vertex_data": PackedByteArray("ey7YvoCAJ7/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz/VLFK8eS7YPoCAJ7/VLFK867vTvj6JIz80RHI8ey7YvoCAJ798XQC7ey7Yvn+AJz98XQC767vTvkCJI780RHI867vTvkCJI780RHI8eS7YPoCAJ798XQC7ey7YvoCAJ798XQC78bvTPkCJI780RHI88bvTPkCJI780RHI8eS7YPn+AJz98XQC7eS7YPoCAJ798XQC78bvTPj6JIz80RHI88bvTPj6JIz80RHI8ey7Yvn+AJz98XQC7eS7YPn+AJz98XQC767vTvj6JIz80RHI8ey7Yvn+AJz98XQC7ey7YvoCAJ7/VLFK8ey7Yvn+AJz/VLFK8ey7YvoCAJ798XQC767vTvkCJI780RHI88bvTPj6JIz80RHI88bvTPkCJI780RHI867vTvj6JIz80RHI8ey7YvoCAJ798XQC7eS7YPoCAJ7/VLFK8ey7YvoCAJ7/VLFK8eS7YPoCAJ798XQC7eS7YPoCAJ798XQC7eS7YPn+AJz/VLFK8eS7YPoCAJ7/VLFK8eS7YPn+AJz98XQC7eS7YPn+AJz98XQC7ey7Yvn+AJz/VLFK8eS7YPn+AJz/VLFK8ey7Yvn+AJz98XQC7/////////7//////////v/////////+//////////7+4K/9/iKipRLgr/3+IqFY7uCv/f36ot0S4K/9/bqgwO/9/gj3///8//3+CPf///z//f4I9////P/9/gj3///8/R9T/f632u2tH1P9/qvZEFEfU/3+P9sBrR9T/f2D2NxT/f3zC////P/9/fML///8//398wv///z//f3zC////PwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f////z//f/9/////P/9//3////8//3//f////z//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3////+/////f////7////9/////v////3////+//3///////7//f///////v/9///////+//3///////78=")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_fbsrv")
-
 [node name="Node3D" type="Node3D" unique_id=1703375110]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=116942088]
@@ -1857,6 +1312,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057994843, 4.7945247, 0.10
 
 [node name="Cabin" type="MeshInstance3D" parent="Three Izba Cabins" unique_id=1643267854]
 transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, 0.99999994, 0, -0.99999994, -1.1920929e-07, 0, 0, 14.882766)
+transparency = 1.0
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_x6b0q")
 
 [node name="Outdoor Table & Bench" parent="Three Izba Cabins/Cabin" unique_id=1703717196 instance=ExtResource("12_op1f7")]
@@ -1878,6 +1335,7 @@ transform = Transform3D(0.005, 0, 0, 0, -5.9604643e-10, -0.005, 0, 0.005, -5.960
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=16021052]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1885,6 +1343,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=1703038721]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1892,6 +1351,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=2061718262]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1899,6 +1359,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=892470219]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1906,6 +1367,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=1704942300]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1913,6 +1375,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=1323435454]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1920,6 +1383,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=769410264]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1927,6 +1391,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier" unique_id=40129125]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1944,6 +1409,7 @@ transform = Transform3D(0.005, 0, 0, 0, -5.9604605e-10, -0.0049999966, 0, 0.0049
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=148157399]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1951,6 +1417,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1140057268]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1958,6 +1425,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=809558680]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1965,6 +1433,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1170061683]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1972,6 +1441,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1439581490]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1979,6 +1449,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1058485079]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1986,6 +1457,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=197858674]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -1993,6 +1465,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier2" unique_id=1304088412]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2010,6 +1483,7 @@ transform = Transform3D(0.005, 0, 0, 0, -5.9604566e-10, -0.0049999934, 0, 0.0049
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=335141439]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2017,6 +1491,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=1963483791]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2024,6 +1499,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=128145800]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2031,6 +1507,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=1836257555]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2038,6 +1515,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=304295404]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2045,6 +1523,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=459364912]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2052,6 +1531,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=1365524958]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2059,6 +1539,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier4" unique_id=11450061]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2076,6 +1557,7 @@ transform = Transform3D(0.005, 0, 0, 0, -5.9604577e-10, -0.0049999943, 0, 0.0049
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=310115283]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2083,6 +1565,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=931417985]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2090,6 +1573,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=1896314231]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2097,6 +1581,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=801548461]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2104,6 +1589,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=1102763026]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2111,6 +1597,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=1894321624]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2118,6 +1605,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=655415778]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2125,6 +1613,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier3" unique_id=1980565411]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2142,6 +1631,7 @@ transform = Transform3D(0.005, 0, 0, 0, -5.960455e-10, -0.004999992, 0, 0.004999
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1757470448]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2149,6 +1639,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1481642806]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2156,6 +1647,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=916936234]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2163,6 +1655,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=752851407]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2170,6 +1663,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1335005031]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2177,6 +1671,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1529805918]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2184,6 +1679,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1320188819]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2191,6 +1687,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier5" unique_id=1300839142]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2208,6 +1705,7 @@ transform = Transform3D(0.005, 0, 0, 0, -5.960453e-10, -0.0049999906, 0, 0.00499
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=620056807]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 84.484375, -45.33496)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2215,6 +1713,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D2" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=107709798]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 46.00879, 84.484375, -0.17602539)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2222,6 +1721,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D3" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=1208400712]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.13504028, 84.053955, 45.500244)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2229,6 +1729,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D4" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=589905189]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.243713, 125.55884, 27.818115)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2236,6 +1737,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D5" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=1591843212]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -27.93634, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2243,6 +1745,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D6" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=1702516900]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, -27.616943)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2250,6 +1753,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D7" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=968707700]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 27.815979, 124.31067, 27.444824)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2257,6 +1761,7 @@ draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="GPUParticles3D8" type="GPUParticles3D" parent="Three Izba Cabins/Cabin/Chandaliers/Chandalier6" unique_id=1010189167]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -45.71582, 84.69116, 0.34350586)
+visibility_range_end = 60.0
 amount = 3
 preprocess = 1.44
 process_material = SubResource("ParticleProcessMaterial_wp5uw")
@@ -2276,6 +1781,7 @@ transform = Transform3D(0.01, 0, 0, 0, -1.192093e-09, -0.01, 0, 0.01, -1.192093e
 transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, -17.308594, 0, -148.9443)
 
 [node name="Kitchen_Cabinet_OLD_FURNITURE _02_0" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Furniture/Kitchen_Cabinet" unique_id=1317186353]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_71wq3")
 
 [node name="small_Bookshelf" type="Node3D" parent="Three Izba Cabins/Cabin/Furniture" unique_id=718581329]
@@ -2283,12 +1789,14 @@ transform = Transform3D(100, 0, 0, 0, -1.6292066e-05, 99.99999, 0, -99.99999, -1
 
 [node name="small_Bookshelf_OLD_FURNITURE _02_0" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Furniture/small_Bookshelf" unique_id=1098940799]
 transform = Transform3D(1.3, 0, 0, 0, 1.2999997, -2.842171e-14, 0, 2.842171e-14, 1.2999997, -0.831427, 0, -0.13038588)
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_p1guv")
 
 [node name="small_Dresser" type="Node3D" parent="Three Izba Cabins/Cabin/Furniture" unique_id=1999724101]
 transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, -187.93954, 0, 52.785538)
 
 [node name="small_Dresser_OLD_FURNITURE _02_0" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Furniture/small_Dresser" unique_id=1859094728]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_h5uw2")
 
 [node name="rustic_Wood_Table" type="Node3D" parent="Three Izba Cabins/Cabin/Furniture" unique_id=722819425]
@@ -2296,12 +1804,14 @@ transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-
 
 [node name="rustic_Wood_Table_OLD_FURNITURE _02_0" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Furniture/rustic_Wood_Table" unique_id=1909145507]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, -9.947598e-14, 0, 9.947598e-14, 1.1, -21.814234, -3.1950226, 1.9257679)
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_kx1jr")
 
 [node name="old_Bookcase" type="Node3D" parent="Three Izba Cabins/Cabin/Furniture" unique_id=244097190]
 transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, -207.71861, 0, -145.73405)
 
 [node name="old_Bookcase_OLD_FURNITURE _01_0" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Furniture/old_Bookcase" unique_id=619308427]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_853h5")
 
 [node name="antique_iron_stove_chimney" type="Node3D" parent="Three Izba Cabins/Cabin/Furniture" unique_id=1271897796]
@@ -2309,10 +1819,12 @@ transform = Transform3D(-2.9802322e-06, 129.99998, 5.6824806e-06, 9.338774e-14, 
 
 [node name="antique_iron_stove_chimney_OLD_FURNITURE _01_0" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Furniture/antique_iron_stove_chimney" unique_id=678527220]
 transform = Transform3D(0.9999999, -1.7763568e-15, 0, 0, 0.7622285, 7.1054274e-15, 0, -3.5527137e-15, 0.9999999, 0, 0, 0)
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_hbo7p")
 
 [node name="antique_iron_stove_OLD_FURNITURE _01_0" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Furniture/antique_iron_stove_chimney" unique_id=1116788909]
 transform = Transform3D(1, 0, 0, 0, 1, -1.4210855e-14, 0, 1.4210855e-14, 1, 0, -0.20053196, -0.93314457)
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_itmpk")
 
 [node name="antique_iron_stove" type="Node3D" parent="Three Izba Cabins/Cabin/Furniture" unique_id=1084840286]
@@ -2323,6 +1835,7 @@ transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-
 
 [node name="old_Wardrobe_OLD_FURNITURE _01_0" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Furniture/old_Wardrobe" unique_id=1935441294]
 transform = Transform3D(1, 0, 0, 0, 1, -1.1368684e-13, 0, 1.1368684e-13, 1, -14.252656, -7.223535, 5.050046)
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_00r27")
 
 [node name="Bookcase" type="Node3D" parent="Three Izba Cabins/Cabin" unique_id=557330385]
@@ -2330,14 +1843,44 @@ mesh = SubResource("ArrayMesh_00r27")
 [node name="Root Scene" parent="Three Izba Cabins/Cabin/Bookcase" unique_id=201882066 instance=ExtResource("18_wk0uk")]
 transform = Transform3D(-0.7, 0, -6.119594e-08, -6.119594e-08, -8.344651e-08, 0.7, -7.2951255e-15, 0.7, 8.344651e-08, -2.7675436, -4.9834375, 0.70626307)
 
+[node name="BookCase_Single" parent="Three Izba Cabins/Cabin/Bookcase/Root Scene/RootNode" parent_id_path=PackedInt32Array(201882066, 2022294060) index="0" unique_id=998869968]
+visibility_range_end = 20.0
+
+[node name="BookCase_RightDoor" parent="Three Izba Cabins/Cabin/Bookcase/Root Scene/RootNode" parent_id_path=PackedInt32Array(201882066, 2022294060) index="1" unique_id=295274324]
+visibility_range_end = 20.0
+
+[node name="BookCase_LeftDoor" parent="Three Izba Cabins/Cabin/Bookcase/Root Scene/RootNode" parent_id_path=PackedInt32Array(201882066, 2022294060) index="2" unique_id=100521833]
+visibility_range_end = 20.0
+
 [node name="Root Scene2" parent="Three Izba Cabins/Cabin/Bookcase" unique_id=534366945 instance=ExtResource("18_wk0uk")]
 transform = Transform3D(-0.7, 0, -6.119594e-08, -6.119594e-08, -8.344651e-08, 0.7, -7.2951255e-15, 0.7, 8.344651e-08, -3.9733753, -4.9834375, 0.70626307)
+
+[node name="BookCase_Single" parent="Three Izba Cabins/Cabin/Bookcase/Root Scene2/RootNode" parent_id_path=PackedInt32Array(534366945, 2022294060) index="0" unique_id=998869968]
+visibility_range_end = 20.0
+
+[node name="BookCase_RightDoor" parent="Three Izba Cabins/Cabin/Bookcase/Root Scene2/RootNode" parent_id_path=PackedInt32Array(534366945, 2022294060) index="1" unique_id=295274324]
+visibility_range_end = 20.0
+
+[node name="BookCase_LeftDoor" parent="Three Izba Cabins/Cabin/Bookcase/Root Scene2/RootNode" parent_id_path=PackedInt32Array(534366945, 2022294060) index="2" unique_id=100521833]
+visibility_range_end = 20.0
 
 [node name="Root Scene3" parent="Three Izba Cabins/Cabin/Bookcase" unique_id=642792383 instance=ExtResource("18_wk0uk")]
 transform = Transform3D(-0.7, 0, -6.119594e-08, -6.119594e-08, -8.344651e-08, 0.7, -7.2951255e-15, 0.7, 8.344651e-08, -5.199807, -4.9834375, 0.70626307)
 
+[node name="BookCase_Single" parent="Three Izba Cabins/Cabin/Bookcase/Root Scene3/RootNode" parent_id_path=PackedInt32Array(642792383, 2022294060) index="0" unique_id=998869968]
+visibility_range_end = 20.0
+
+[node name="BookCase_RightDoor" parent="Three Izba Cabins/Cabin/Bookcase/Root Scene3/RootNode" parent_id_path=PackedInt32Array(642792383, 2022294060) index="1" unique_id=295274324]
+visibility_range_end = 20.0
+
+[node name="BookCase_LeftDoor" parent="Three Izba Cabins/Cabin/Bookcase/Root Scene3/RootNode" parent_id_path=PackedInt32Array(642792383, 2022294060) index="2" unique_id=100521833]
+visibility_range_end = 20.0
+
 [node name="Lamp" parent="Three Izba Cabins/Cabin" unique_id=742623261 instance=ExtResource("19_6mtta")]
 transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, -0.99999934, 0, 0.99999934, -1.1920929e-07, -4.25346, -1.8752451, 1.6153746)
+
+[node name="Object_4" parent="Three Izba Cabins/Cabin/Lamp/Sketchfab_model/root/GLTF_SceneRootNode/LampLow_0" parent_id_path=PackedInt32Array(742623261, 1048978772) index="0" unique_id=779130660]
+visibility_range_end = 20.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Three Izba Cabins/Cabin/Lamp" unique_id=758914937]
 transform = Transform3D(1, 0, 0, 0, 1.0000007, -1.3552527e-20, 0, 1.3552527e-20, 1.0000007, 0, 0.19722271, 0)
@@ -2350,6 +1893,15 @@ omni_attenuation = 2.188
 [node name="Fridge" parent="Three Izba Cabins/Cabin" unique_id=1036578302 instance=ExtResource("20_e8fot")]
 transform = Transform3D(-0.85, 0, 1.2834644e-07, 1.2834644e-07, -1.0132791e-07, 0.85, 1.530009e-14, 0.85, 1.0132791e-07, -4.719262, 3.7448778, 0.7335839)
 
+[node name="Box001_01 - Default_0" parent="Three Izba Cabins/Cabin/Fridge/Sketchfab_model/dd474415416a4a82833b6b20809065aa_fbx/RootNode/Box001" parent_id_path=PackedInt32Array(1036578302, 1573226049) index="0" unique_id=1741814191]
+visibility_range_end = 20.0
+
+[node name="Box002__0" parent="Three Izba Cabins/Cabin/Fridge/Sketchfab_model/dd474415416a4a82833b6b20809065aa_fbx/RootNode/Box002" parent_id_path=PackedInt32Array(1036578302, 1918347410) index="0" unique_id=722524525]
+visibility_range_end = 20.0
+
+[node name="Cylinder001__0" parent="Three Izba Cabins/Cabin/Fridge/Sketchfab_model/dd474415416a4a82833b6b20809065aa_fbx/RootNode/Cylinder001" parent_id_path=PackedInt32Array(1036578302, 406086448) index="0" unique_id=609451874]
+visibility_range_end = 20.0
+
 [node name="Soviet Furniture2" type="Node3D" parent="Three Izba Cabins/Cabin" unique_id=10488106]
 transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, -0.99999994, 0, 0.99999994, -1.1920929e-07, 27.674263, 0.41794682, 1.2213621)
 
@@ -2357,40 +1909,49 @@ transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, -0.99999994, 0, 0.99999994, 
 transform = Transform3D(0.5590802, -0.010771824, -0.6626055, 0.00027267192, 0.8669143, -0.013863159, 0.662693, 0.008730936, 0.55901206, -25.569696, -0.7051816, -8.57019)
 
 [node name="Object_4" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_003_0" unique_id=1163216396]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_6h3xk")
 
 [node name="Object_5" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_003_0" unique_id=1216390020]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_wmji1")
 
 [node name="Cube_001_2" type="Node3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2" unique_id=1206024542]
 transform = Transform3D(-1.2998475, 0, -0.0199093, 0, 1.3, 0, 0.0199093, 0, -1.2998475, -28.043608, 0.04009962, 4.935849)
 
 [node name="Object_7" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_001_2" unique_id=1550276463]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_pw14v")
 
 [node name="Object_8" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_001_2" unique_id=362815992]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_qwjvg")
 
 [node name="Object_9" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_001_2" unique_id=1196531168]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_1ya6a")
 
 [node name="Cube_002_3" type="Node3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2" unique_id=1319346152]
 transform = Transform3D(0.20565844, 0, -0.21841386, 0, 0.3, 0, 0.21841386, 0, 0.20565844, -31.831955, -0.033634186, 2.296277)
 
 [node name="Object_11" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_002_3" unique_id=1862449943]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_72wjv")
 
 [node name="Object_12" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_002_3" unique_id=2032336164]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_0lapi")
 
 [node name="Cube_4" type="Node3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2" unique_id=305301641]
 transform = Transform3D(-3.2585385e-07, 1.157181e-10, 2, 0.018221367, 1.999917, 2.8530378e-09, -1.999917, 0.018221367, -3.2584137e-07, -28.000805, 0.01981306, 2.971858)
 
 [node name="Object_14" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_4" unique_id=626764675]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_33v1q")
 
 [node name="Object_15" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_4" unique_id=1609061633]
 transform = Transform3D(1, 0, 0, 0, 1, 1.110223e-16, 1.4210855e-14, 0, 1, 0, 0, 0.027090937)
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_xb6ko")
 
 [node name="Cube_005_5" type="Node3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2" unique_id=2075137341]
@@ -2398,27 +1959,35 @@ transform = Transform3D(0.9581604, 0, 0.0076900413, 0, 0.48216453, 0, -0.0076900
 
 [node name="Object_17" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_005_5" unique_id=1564820674]
 transform = Transform3D(1, 0, -9.313226e-10, 0, 1, 0, 0, 0, 1, -0.004219532, 0, 0.52586174)
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_vt3ke")
 
 [node name="Cube_007_6" type="Node3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2" unique_id=1267186148]
 transform = Transform3D(-0.0024177998, 0.01169962, -0.02860547, -2.1273718e-10, 0.028692875, 0.011735368, 0.030905569, 0.0009152831, -0.002237859, -32.05875, -0.07213831, 3.3427496)
 
 [node name="Object_19" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_007_6" unique_id=1209333167]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_ggpqu")
 
 [node name="Object_20" type="MeshInstance3D" parent="Three Izba Cabins/Cabin/Soviet Furniture2/Cube_007_6" unique_id=899395759]
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_g31xu")
 
 [node name="TV" parent="Three Izba Cabins/Cabin" unique_id=1497201035 instance=ExtResource("32_ptq5h")]
 transform = Transform3D(-0.001237146, 0, -0.012941, -0.012940998, -1.549721e-09, 0.0012371457, -1.5426876e-09, 0.012999998, 1.4747928e-10, -0.40061605, -3.1923609, 1.4114428)
 
+[node name="tvSet_lo_lambert1_0" parent="Three Izba Cabins/Cabin/TV/Sketchfab_model/tvSet_fbx/RootNode/tvSet_lo" parent_id_path=PackedInt32Array(1497201035, 1766835601) index="0" unique_id=1689822491]
+visibility_range_end = 60.0
+
 [node name="Rug" type="MeshInstance3D" parent="Three Izba Cabins/Cabin" unique_id=1555250400]
 transform = Transform3D(2.4724605, -0.779334, -1.0227561e-07, 0.7506049, 2.5670917, 7.927835e-08, 8.9479094e-08, -1.3105961e-07, 2.1610143, -3.203349, -2.0707064, 0.685266)
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_254wq")
 surface_material_override/0 = SubResource("StandardMaterial3D_iqbik")
 
 [node name="Rug2" type="MeshInstance3D" parent="Three Izba Cabins/Cabin" unique_id=38784640]
 transform = Transform3D(2.421855, 0.9350736, 1.2271406e-07, -0.9006039, 2.5145488, 7.238296e-08, -1.0736037e-07, -1.3732316e-07, 2.1610134, -2.3301935, 4.0815067, 0.6852665)
+visibility_range_end = 60.0
 mesh = SubResource("ArrayMesh_254wq")
 surface_material_override/0 = SubResource("StandardMaterial3D_iqbik")
 
@@ -3123,122 +2692,6 @@ volume_db = -20.0
 
 [node name="ForestSound" type="AudioStreamPlayer3D" parent="." unique_id=675087667]
 
-[node name="Rugs" type="Node3D" parent="." unique_id=1517481576]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.536726, 6.589694, 31.382624)
-
-[node name="Sketchfab_model" type="Node3D" parent="Rugs" unique_id=1339240390]
-transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
-
-[node name="800d5ad018aa4037b3386d1c4f0071bf_fbx" type="Node3D" parent="Rugs/Sketchfab_model" unique_id=840158035]
-transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
-
-[node name="RootNode" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx" unique_id=646285337]
-
-[node name="Vintage Rugs_001" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=755863616]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 1794.6653, -1.8445591, 67.022896)
-
-[node name="Vintage Rugs_002" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=1209499504]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 1514.4551, -1.8445591, 67.022896)
-
-[node name="Vintage Rugs_002_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_002" unique_id=1640436796]
-mesh = SubResource("ArrayMesh_yif25")
-
-[node name="Vintage Rugs_003" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=1618639943]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2353.9358, -1.8445591, 67.022896)
-
-[node name="Vintage Rugs_003_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_003" unique_id=840203968]
-mesh = SubResource("ArrayMesh_j2qos")
-
-[node name="Vintage Rugs_004" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=31126478]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2076.2354, -1.8445591, 67.022896)
-
-[node name="Vintage Rugs_004_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_004" unique_id=2092946081]
-mesh = SubResource("ArrayMesh_lobo7")
-
-[node name="Vintage Rugs_005" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=1179551475]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2633.3618, -1.8445591, 67.022896)
-
-[node name="Vintage Rugs_005_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_005" unique_id=308519011]
-mesh = SubResource("ArrayMesh_nrrr7")
-
-[node name="Vintage Rugs_006" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=76321970]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 1794.6653, -1.8445591, -266.78247)
-
-[node name="Vintage Rugs_006_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_006" unique_id=525935077]
-mesh = SubResource("ArrayMesh_4rfrm")
-
-[node name="Vintage Rugs_007" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=897449057]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 1514.4551, -1.8445591, -266.78247)
-
-[node name="Vintage Rugs_007_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_007" unique_id=631136596]
-mesh = SubResource("ArrayMesh_5d7pg")
-
-[node name="Vintage Rugs_008" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=1548218025]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2353.9358, -1.8445591, -266.78247)
-
-[node name="Vintage Rugs_008_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_008" unique_id=792360320]
-mesh = SubResource("ArrayMesh_4puy5")
-
-[node name="Vintage Rugs_009" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=1437295126]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2076.2354, -1.8445591, -266.78247)
-
-[node name="Vintage Rugs_009_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_009" unique_id=311742799]
-mesh = SubResource("ArrayMesh_71841")
-
-[node name="Vintage Rugs_010" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=2115161741]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2633.3618, -1.8445591, -266.78247)
-
-[node name="Vintage Rugs_010_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_010" unique_id=88033426]
-mesh = SubResource("ArrayMesh_j2mqo")
-
-[node name="Vintage Rugs_011" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=258935820]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 1794.6653, -1.8445591, -605.6075)
-
-[node name="Vintage Rugs_011_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_011" unique_id=879403371]
-mesh = SubResource("ArrayMesh_26s0k")
-
-[node name="Vintage Rugs_012" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=2090522087]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 1514.4551, -1.8445591, -605.6075)
-
-[node name="Vintage Rugs_012_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_012" unique_id=712614685]
-mesh = SubResource("ArrayMesh_0vxym")
-
-[node name="Vintage Rugs_013" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=1614985399]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2353.9358, -1.8445591, -605.6075)
-
-[node name="Vintage Rugs_013_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_013" unique_id=1439099293]
-mesh = SubResource("ArrayMesh_gh1rf")
-
-[node name="Vintage Rugs_014" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=1609285383]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2076.2354, -1.8445591, -605.6075)
-
-[node name="Vintage Rugs_014_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_014" unique_id=573438663]
-mesh = SubResource("ArrayMesh_330js")
-
-[node name="Vintage Rugs_015" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=782824682]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2633.3618, -1.8445591, -605.6075)
-
-[node name="Vintage Rugs_015_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_015" unique_id=1311313092]
-mesh = SubResource("ArrayMesh_bkbrm")
-
-[node name="Vintage Rugs_016" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=1250272674]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2353.9358, -1.8445591, -967.0209)
-
-[node name="Vintage Rugs_016_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_016" unique_id=1944910904]
-mesh = SubResource("ArrayMesh_qo5cw")
-
-[node name="Vintage Rugs_017" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=75375280]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2076.2354, -1.8445591, -967.0209)
-
-[node name="Vintage Rugs_017_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_017" unique_id=1890308455]
-mesh = SubResource("ArrayMesh_upaf2")
-
-[node name="Vintage Rugs_018" type="Node3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode" unique_id=1961884630]
-transform = Transform3D(236.52861, 0, 0, 0, -3.520733e-05, 216.10104, 0, -216.10104, -3.520733e-05, 2633.3618, -1.8445591, -967.0209)
-
-[node name="Vintage Rugs_018_Vintage Rugs_0" type="MeshInstance3D" parent="Rugs/Sketchfab_model/800d5ad018aa4037b3386d1c4f0071bf_fbx/RootNode/Vintage Rugs_018" unique_id=1289868256]
-mesh = SubResource("ArrayMesh_6r6jn")
-
 [node name="Trees" type="Node3D" parent="." unique_id=1759577267]
 script = ExtResource("57_wk0uk")
 apply_in_editor = null
@@ -3247,157 +2700,14 @@ visibility_begin_margin = 0.0
 visibility_end = 30.0
 visibility_end_margin = 20.0
 
-[node name="5 scale tree" type="Node3D" parent="Trees" unique_id=7525478]
-
-[node name="Tree1" parent="Trees/5 scale tree" unique_id=386486950 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 57.386787, 8.3558655, 41.783134)
-
-[node name="Tree15" parent="Trees/5 scale tree" unique_id=1136013811 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.034547474, 0.03530944, -0.007727534, -0.0054541044, 0.015659684, 0.047170185, 0.035731282, -0.031749282, 0.01467168, 61.64645, 8.3558655, 44.2565)
-
-[node name="Tree4" parent="Trees/5 scale tree" unique_id=635108092 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 27.970703, 3.5084248, 41.783134)
-
-[node name="Tree5" parent="Trees/5 scale tree" unique_id=694518911 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 27.970703, 3.5084248, 51.02428)
-
-[node name="Tree6" parent="Trees/5 scale tree" unique_id=1599132751 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 27.970703, 1.2982941, 29.25169)
-
-[node name="Tree7" parent="Trees/5 scale tree" unique_id=1208604674 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 27.970703, 1.2982941, -27.32557)
-
-[node name="Tree8" parent="Trees/5 scale tree" unique_id=1567588759 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 15.373234, 1.2982941, -27.32557)
-
-[node name="Tree9" parent="Trees/5 scale tree" unique_id=807770604 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.83389854, 1.2982941, -27.32557)
-
-[node name="Tree10" parent="Trees/5 scale tree" unique_id=474640161 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.83389854, 0.47666454, -12.978472)
-
-[node name="Tree11" parent="Trees/5 scale tree" unique_id=928983264 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 16.224613, -4.914531, -12.978472)
-
-[node name="Tree12" parent="Trees/5 scale tree" unique_id=867978774 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 41.915916, -0.34748888, -22.446905)
-
-[node name="Tree13" parent="Trees/5 scale tree" unique_id=387397865 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 59.177895, -0.34748888, -22.446905)
-
-[node name="Tree14" parent="Trees/5 scale tree" unique_id=921226237 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 59.177895, -0.34748888, -22.446905)
-
-[node name="Tree2" parent="Trees/5 scale tree" unique_id=295723183 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 65.173416, 11.814804, 62.295708)
-
-[node name="Tree3" parent="Trees/5 scale tree" unique_id=569321474 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 63.6371, 11.814804, 122.972786)
-
-[node name="4 scale tree" type="Node3D" parent="Trees" unique_id=363867500]
-
-[node name="Tree3" parent="Trees/4 scale tree" unique_id=2141421385 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 80.034096, 15.781721, 62.295708)
-
-[node name="Tree4" parent="Trees/4 scale tree" unique_id=1362744855 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 74.43139, 15.464594, 88.08)
-
-[node name="Tree6" parent="Trees/4 scale tree" unique_id=881332000 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 24.862875, 3.2405796, 35.814423)
-
-[node name="Tree7" parent="Trees/4 scale tree" unique_id=722975052 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 24.862875, 1.3828831, 17.250153)
-
-[node name="Tree8" parent="Trees/4 scale tree" unique_id=389470159 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 34.945976, 1.3828831, 22.736727)
-
-[node name="Tree9" parent="Trees/4 scale tree" unique_id=1053564677 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 40.997482, 1.3828831, 40.61344)
-
-[node name="Tree10" parent="Trees/4 scale tree" unique_id=893650175 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 51.491055, 1.3828831, 53.17536)
-
-[node name="Tree5" parent="Trees/4 scale tree" unique_id=1859058882 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 74.43139, 15.464594, 117.267525)
-
-[node name="3 scale tree" type="Node3D" parent="Trees" unique_id=1606280719]
-
-[node name="Tree5" parent="Trees/3 scale tree" unique_id=197378741 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 78.50213, 16.30961, 77.68803)
-
-[node name="Tree6" parent="Trees/3 scale tree" unique_id=536511523 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 71.32164, 16.30961, 77.68803)
-
-[node name="Tree17" parent="Trees/3 scale tree" unique_id=696629013 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 71.32164, 16.30961, 68.7177)
-
-[node name="Tree18" parent="Trees/3 scale tree" unique_id=395803358 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 71.32164, 16.30961, 71.61557)
-
-[node name="Tree7" parent="Trees/3 scale tree" unique_id=1339991891 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 71.32164, 16.30961, 83.36439)
-
-[node name="Tree8" parent="Trees/3 scale tree" unique_id=530040732 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 71.32164, 16.30961, 96.46647)
-
-[node name="Tree19" parent="Trees/3 scale tree" unique_id=1277698333 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 84.87445, 16.30961, 103.89126)
-
-[node name="Tree20" parent="Trees/3 scale tree" unique_id=1376445478 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 83.25476, 17.23588, 108.97161)
-
-[node name="Tree22" parent="Trees/3 scale tree" unique_id=1116396378 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.0035842552, -0.018992463, -0.022944268, 0.029653901, 0.00010860711, 0.004542505, -0.0027927149, -0.023222284, 0.01878633, 83.25476, 21.276382, 114.6361)
-
-[node name="Tree21" parent="Trees/3 scale tree" unique_id=567093727 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 76.7989, 16.30961, 107.52187)
-
-[node name="Tree14" parent="Trees/3 scale tree" unique_id=1974210056 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 88.16194, 16.30961, 96.46647)
-
-[node name="Tree15" parent="Trees/3 scale tree" unique_id=452882478 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 90.8694, 18.456326, 88.04851)
-
-[node name="Tree16" parent="Trees/3 scale tree" unique_id=882782331 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 90.8694, 16.93966, 80.755424)
-
-[node name="Tree9" parent="Trees/3 scale tree" unique_id=857721567 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 71.32164, 16.30961, 103.524605)
-
-[node name="Tree10" parent="Trees/3 scale tree" unique_id=1013273427 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 71.32164, 16.30961, 103.524605)
-
-[node name="Tree11" parent="Trees/3 scale tree" unique_id=431055853 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 74.55243, 14.146841, 60.013454)
-
-[node name="Tree12" parent="Trees/3 scale tree" unique_id=1106894546 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 68.81301, 9.316483, 50.893547)
-
-[node name="Tree23" parent="Trees/3 scale tree" unique_id=295308194 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 35.859486, 3.688343, 41.289177)
-
-[node name="Tree24" parent="Trees/3 scale tree" unique_id=1475864187 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 35.859486, 3.688343, 32.350433)
-
-[node name="Tree25" parent="Trees/3 scale tree" unique_id=605024807 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 42.631844, 3.688343, 32.350433)
-
-[node name="Tree30" parent="Trees/3 scale tree" unique_id=1956146373 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 45.183105, 3.2915797, 24.387503)
-
-[node name="Tree26" parent="Trees/3 scale tree" unique_id=1827594835 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 46.64208, 3.688343, 39.29411)
-
-[node name="Tree27" parent="Trees/3 scale tree" unique_id=555123756 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 46.64208, 3.688343, 49.33994)
-
-[node name="Tree28" parent="Trees/3 scale tree" unique_id=1296514356 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 52.135086, 3.688343, 40.868755)
-
-[node name="Tree29" parent="Trees/3 scale tree" unique_id=1409340450 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 25.194847, 1.2328849, 25.281845)
-
-[node name="Tree13" parent="Trees/3 scale tree" unique_id=349571359 instance=ExtResource("57_u6561")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 60.97747, 9.316483, 50.893547)
-
 [node name="Pine Trees" type="Node3D" parent="Trees" unique_id=1395307034]
+
+[node name="PineTree" parent="Trees/Pine Trees" unique_id=270278370 instance=ExtResource("59_wk0uk")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 3.041543, 0)
+
+[editable path="Three Izba Cabins/Cabin/Bookcase/Root Scene"]
+[editable path="Three Izba Cabins/Cabin/Bookcase/Root Scene2"]
+[editable path="Three Izba Cabins/Cabin/Bookcase/Root Scene3"]
+[editable path="Three Izba Cabins/Cabin/Lamp"]
+[editable path="Three Izba Cabins/Cabin/Fridge"]
+[editable path="Three Izba Cabins/Cabin/TV"]
