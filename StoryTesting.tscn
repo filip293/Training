@@ -1581,3 +1581,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6220188, -0.39772797)
 [node name="FootstepAudioPlayer3D" type="AudioStreamPlayer3D" parent="Player" unique_id=1535204368]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8044224, 0)
 volume_db = -20.0
+
+[node name="ForestSound" type="AudioStreamPlayer3D" parent="." unique_id=675087667]
