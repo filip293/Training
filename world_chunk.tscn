@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://7qw4anvibuwo"]
+
+[ext_resource type="PackedScene" uid="uid://dbtqj6p2fmh3b" path="res://Foliage/Tree/pine_tree.tscn" id="1_1ckxm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wp5uw"]
+albedo_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wp5uw"]
+material = SubResource("StandardMaterial3D_wp5uw")
+
+[node name="WorldChunk" type="Node3D" unique_id=145820173]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1816651542]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+mesh = SubResource("PlaneMesh_wp5uw")
+
+[node name="Sketchfab_Scene" parent="." unique_id=270278370 instance=ExtResource("1_1ckxm")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.5947839, 0.050495863, 59.125416)
