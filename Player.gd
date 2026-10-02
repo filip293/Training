@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export_group("Cinematic Movement Settings")
-@export var walk_speed: float = 1.6
+@export var walk_speed: float = 4.0
 @export var acceleration: float = 8.0
 @export var deceleration: float = 10.0
 @export var air_control: float = 4.0
@@ -26,6 +26,7 @@ extends CharacterBody3D
 @export var house_footsteps: Array[AudioStream] = []
 
 @onready var camera: Camera3D = $Camera3D
+@onready var interaction_ray: RayCast3D = $Camera3D/RayCast3D
 @onready var footstep_player: AudioStreamPlayer3D = $FootstepAudioPlayer3D
 @onready var ground_detector: Area3D = $GroundDetectorArea3D
 
@@ -48,6 +49,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
 		get_tree().quit()
+
+	# Interact key (using 'E' key)
+	if event is InputEventKey and event.pressed and event.keycode == KEY_E:
+		_try_interact()
 
 	if event is InputEventMouseButton and event.pressed and Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -90,6 +95,18 @@ func _physics_process(delta: float) -> void:
 	# Apply Camera effects and process footsteps
 	_apply_cinematic_camera(delta)
 	_handle_footsteps(delta)
+
+func _try_interact() -> void:
+	if not interaction_ray:
+		return
+		
+	interaction_ray.force_raycast_update()
+	
+	if interaction_ray.is_colliding():
+		var collider = interaction_ray.get_collider()
+		# Calls the interact() function on whatever object we are looking at (like our door)
+		if collider and collider.has_method("interact"):
+			collider.interact()
 
 func _apply_cinematic_camera(delta: float) -> void:
 	if not camera:
