@@ -1109,16 +1109,16 @@ uv_scale = 0.5
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_utie3"]
 name = "Grass001_1K-JPG_Color"
 id = 1
-albedo_texture = ExtResource("14_a15gv")
-normal_texture = ExtResource("41_wk0uk")
+albedo_texture = ExtResource("43_6mtta")
+normal_texture = ExtResource("44_e8fot")
 normal_depth = 1.0
 uv_scale = 0.5
 
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_b7j8m"]
 name = "Ground023_1K-JPG_Color"
 id = 2
-albedo_texture = ExtResource("43_6mtta")
-normal_texture = ExtResource("44_e8fot")
+albedo_texture = ExtResource("14_a15gv")
+normal_texture = ExtResource("41_wk0uk")
 normal_depth = 2.0
 uv_scale = 0.5
 
