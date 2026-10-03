@@ -18,10 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://c5puj0jwgjrvg" path="res://Cabin assets/flame.png" id="14_m4cqx"]
 [ext_resource type="Shader" uid="uid://cbs5cb8tubg6h" path="res://FernWind.gdshader" id="16_2kyub"]
 [ext_resource type="Texture2D" uid="uid://b1oq7v7ijuear" path="res://Cabin assets/old_lowpoly_furniture_0.png" id="16_6j7x4"]
-[ext_resource type="Texture2D" uid="uid://c6qv7430vdnsv" path="res://Textures/Grass/Grass001_1K-JPG_Color.jpg" id="16_b7j8m"]
 [ext_resource type="Texture2D" uid="uid://dvjp4fdpu75l3" path="res://Foliage/Fern2/3d_fern_-_01_0.png" id="17_dwfe2"]
 [ext_resource type="PackedScene" uid="uid://bfuvgc82it65c" path="res://Foliage/Plant/low_poly_plant_-_by_lemstrx.glb" id="17_m4cqx"]
-[ext_resource type="Texture2D" uid="uid://dpvx34cymhts0" path="res://Textures/Grass/Grass001_1K-JPG_NormalGL.jpg" id="17_u6lov"]
 [ext_resource type="Texture2D" uid="uid://dfgcdah7qmx0t" path="res://Cabin assets/old_lowpoly_furniture_1.png" id="17_u6561"]
 [ext_resource type="PackedScene" uid="uid://wqaki0tbwsh8" path="res://Foliage/Fern2/3d_fern_-_01.glb" id="18_e3avu"]
 [ext_resource type="PackedScene" uid="uid://culprouq2m5uy" path="res://Cabin assets/Bookcase.glb" id="18_wk0uk"]
@@ -54,6 +52,7 @@
 [ext_resource type="AudioStream" uid="uid://c2xk63qjnjcte" path="res://Sounds/FootstepGround/Ground4.wav" id="34_s3656"]
 [ext_resource type="AudioStream" uid="uid://cvvx151i47c8r" path="res://Sounds/FootstepGround/Ground5.wav" id="35_iy4ep"]
 [ext_resource type="Texture2D" uid="uid://b6j5wpn0heeku" path="res://Textures/Ground/Ground110_1K-JPG_NormalGL.jpg" id="40_6mtta"]
+[ext_resource type="Texture2D" uid="uid://cf4pchpvlc0wc" path="res://Textures/Ground/Ground110_1K-JPG_NormalDX.jpg" id="41_wk0uk"]
 [ext_resource type="Texture2D" uid="uid://b5r37jc8dgjf0" path="res://Textures/GroundWithLeaves/Ground023_1K-JPG_Color.jpg" id="43_6mtta"]
 [ext_resource type="Texture2D" uid="uid://ojtxiwkgik1q" path="res://Textures/GroundWithLeaves/Ground023_1K-JPG_NormalGL.jpg" id="44_e8fot"]
 [ext_resource type="Script" uid="uid://bhskjcylx2xt4" path="res://VisRange.gd" id="57_wk0uk"]
@@ -1206,8 +1205,8 @@ uv_scale = 0.5
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_utie3"]
 name = "Grass001_1K-JPG_Color"
 id = 1
-albedo_texture = ExtResource("16_b7j8m")
-normal_texture = ExtResource("17_u6lov")
+albedo_texture = ExtResource("14_a15gv")
+normal_texture = ExtResource("41_wk0uk")
 normal_depth = 1.0
 uv_scale = 0.5
 
