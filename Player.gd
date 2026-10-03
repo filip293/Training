@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export_group("Cinematic Movement Settings")
-@export var walk_speed: float = 4.0
+@export var walk_speed: float = 2.0
 @export var acceleration: float = 8.0
 @export var deceleration: float = 10.0
 @export var air_control: float = 4.0

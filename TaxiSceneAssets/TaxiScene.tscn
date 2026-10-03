@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://deajqo83vdnol" path="res://TaxiSceneAssets/juliush-rain-on-a-car-roof-nature-sounds-8448.mp3" id="5_msjnw"]
 [ext_resource type="PackedScene" uid="uid://d157vhi0ounb2" path="res://Foliage/Tree/pine_tree_low-poly.glb" id="6_wwuaq"]
 [ext_resource type="PackedScene" uid="uid://cmh4to8d730lp" path="res://Foliage/Tree/pine_tree.glb" id="7_v200v"]
-[ext_resource type="Texture2D" uid="uid://dcvwgbm5pt1cx" path="res://Foliage/Rock/ruined_rock_fence_0.png" id="8_wwuaq"]
 [ext_resource type="Texture2D" uid="uid://d382xd4vkcva8" path="res://Characters/Characters_psx_01/Textures/Character_03.png" id="10_v200v"]
 [ext_resource type="Script" uid="uid://2oafvgedbubw" path="res://TaxiSceneAssets/dialogue_ui.gd" id="12_vj5xn"]
 
@@ -30,11 +29,11 @@ volumetric_fog_density = 0.001
 volumetric_fog_emission = Color(1, 1, 1, 1)
 volumetric_fog_emission_energy = 0.5
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wp5uw"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8pvuw"]
 emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
-angle_min = -19.99999
-angle_max = -19.99999
+angle_min = 20.000011
+angle_max = 20.000011
 gravity = Vector3(0, -9.8, -5)
 
 [sub_resource type="Gradient" id="Gradient_3l45p"]
@@ -58,6 +57,13 @@ particles_anim_loop = false
 [sub_resource type="QuadMesh" id="QuadMesh_thx5m"]
 material = SubResource("StandardMaterial3D_gssvw")
 size = Vector2(0.02, 0.4)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wp5uw"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = -19.99999
+angle_max = -19.99999
+gravity = Vector3(0, -9.8, -5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q85ae"]
 transparency = 1
@@ -370,6 +376,9 @@ _data = {
 [sub_resource type="FogMaterial" id="FogMaterial_wp5uw"]
 density = -8.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vj5xn"]
+load_path = "res://.godot/imported/ruined_rock_fence_0.png-1de80ff7fd678b859fdef2a90b834978.s3tc.ctex"
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8pvuw"]
 specular_mode = 2
 albedo_color = Color(0.601223, 0.601223, 0.60122293, 1)
@@ -377,7 +386,7 @@ albedo_texture = ExtResource("1_sfg72")
 roughness = 0.75
 normal_enabled = true
 normal_scale = 0.66
-normal_texture = ExtResource("8_wwuaq")
+normal_texture = SubResource("CompressedTexture2D_vj5xn")
 uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wp5uw"]
@@ -402,10 +411,10 @@ omni_range = 12.845
 omni_attenuation = 1.985
 
 [node name="RainParticles" type="GPUParticles3D" parent="MainCar" unique_id=427019797]
-transform = Transform3D(0.47611117, 1.4940046, 2.5165823, -0.18272847, 3.892728, -0.9658484, -9.160148, 0, 0.1500697, -10.77216, 12.615441, 0.3285637)
+transform = Transform3D(0.476111, 1.4940046, 2.516582, -0.18272847, 3.892728, -0.96584845, -9.160148, -2.3299332e-08, 0.15006968, -10.77216, 12.615441, 0.3285637)
 amount = 200
 speed_scale = 10.0
-process_material = SubResource("ParticleProcessMaterial_wp5uw")
+process_material = SubResource("ParticleProcessMaterial_8pvuw")
 draw_pass_1 = SubResource("QuadMesh_thx5m")
 
 [node name="RainParticles2" type="GPUParticles3D" parent="MainCar" unique_id=298312263]
