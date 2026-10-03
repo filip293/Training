@@ -55,6 +55,8 @@
 [ext_resource type="Texture2D" uid="uid://cf4pchpvlc0wc" path="res://Textures/Ground/Ground110_1K-JPG_NormalDX.jpg" id="41_wk0uk"]
 [ext_resource type="Texture2D" uid="uid://b5r37jc8dgjf0" path="res://Textures/GroundWithLeaves/Ground023_1K-JPG_Color.jpg" id="43_6mtta"]
 [ext_resource type="Texture2D" uid="uid://ojtxiwkgik1q" path="res://Textures/GroundWithLeaves/Ground023_1K-JPG_NormalGL.jpg" id="44_e8fot"]
+[ext_resource type="Texture2D" uid="uid://j4iv10y3d41g" path="res://Textures/MountainRock/Mountain.jpg" id="48_7mp1g"]
+[ext_resource type="Texture2D" uid="uid://ch5k61nxliyd0" path="res://Textures/MountainRock/MountainNR.jpg" id="48_rr3fw"]
 [ext_resource type="AudioStream" uid="uid://d07yrb4w8wq7x" path="res://Sounds/Forest.wav" id="56_6mtta"]
 [ext_resource type="Script" uid="uid://bhskjcylx2xt4" path="res://VisRange.gd" id="57_wk0uk"]
 [ext_resource type="PackedScene" uid="uid://cff5yunrpv84k" path="res://Foliage/Tree/lowpolypine.tscn" id="59_6mtta"]
@@ -73,7 +75,7 @@ tonemap_mode = 4
 tonemap_agx_contrast = 1.3
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.06
-volumetric_fog_albedo = Color(0.9079417, 0.9079417, 0.90794164, 1)
+volumetric_fog_albedo = Color(0.8431839, 0.8431839, 0.84318376, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qwcq"]
 resource_name = "Log Wall 3"
@@ -1148,9 +1150,17 @@ normal_texture = ExtResource("29_s3656")
 normal_depth = 2.0
 uv_scale = 0.5
 
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_0aob3"]
+name = "Mountain"
+id = 5
+albedo_texture = ExtResource("48_7mp1g")
+normal_texture = ExtResource("48_rr3fw")
+normal_depth = 2.0
+uv_scale = 0.5
+
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_h3wf8"]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_d63ey"), SubResource("Terrain3DMeshAsset_m4cqx"), SubResource("Terrain3DMeshAsset_e61ml")])
-texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_231ny"), SubResource("Terrain3DTextureAsset_utie3"), SubResource("Terrain3DTextureAsset_b7j8m"), SubResource("Terrain3DTextureAsset_e3avu"), SubResource("Terrain3DTextureAsset_iy4ep")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_231ny"), SubResource("Terrain3DTextureAsset_utie3"), SubResource("Terrain3DTextureAsset_b7j8m"), SubResource("Terrain3DTextureAsset_e3avu"), SubResource("Terrain3DTextureAsset_iy4ep"), SubResource("Terrain3DTextureAsset_0aob3")])
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d63ey"]
 size = Vector3(91.594536, 96.102036, 703.31885)
@@ -2189,6 +2199,120 @@ shape = SubResource("ConvexPolygonShape3D_68adg")
 transform = Transform3D(-1.2471275, -18.115395, 59.654045, -49.026222, 37.143024, 10.254436, -38.512367, -46.696426, -14.9856415, -205.13818, 32.48706, 12.734131)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock4/StaticBody3D9" unique_id=2136003119]
+shape = SubResource("ConvexPolygonShape3D_mibjj")
+
+[node name="Rock12" parent="Terrain3D/Rocks" unique_id=211905873 instance=ExtResource("26_m4cqx")]
+transform = Transform3D(-0.008322964, 0.0017048931, 0.005274612, -0.005543001, -0.0024603114, -0.007951222, -5.787745e-05, -0.009541494, 0.0029927334, 89.83351, 20.372639, 81.02884)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain3D/Rocks/Rock12" unique_id=37523213]
+transform = Transform3D(24.59756, -21.24061, 63.58185, 65.569374, -6.465744, -27.526457, 13.945314, 67.866684, 17.27708, 111.04541, 24.202637, 0.00024414063)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock12/StaticBody3D" unique_id=674280633]
+shape = SubResource("ConvexPolygonShape3D_e3avu")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Terrain3D/Rocks/Rock12" unique_id=763594232]
+transform = Transform3D(-35.579987, -9.39244, -5.1098137, -7.5613966, 34.655266, -11.049942, 7.5599895, -9.542432, -35.10061, 68.69629, 100.31641, 12.641846)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock12/StaticBody3D2" unique_id=466672407]
+shape = SubResource("ConvexPolygonShape3D_m4cqx")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Terrain3D/Rocks/Rock12" unique_id=1052882796]
+transform = Transform3D(-12.902276, -5.3595996, -21.810112, -1.52009, 25.30364, -5.3188524, 22.407488, -1.369508, -12.91913, 10.665039, 93.7063, -28.441528)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock12/StaticBody3D3" unique_id=391624901]
+shape = SubResource("ConvexPolygonShape3D_d63ey")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Terrain3D/Rocks/Rock12" unique_id=739801571]
+transform = Transform3D(5.7981358, -10.24097, 67.85179, 65.07961, 22.411148, -2.1786938, -21.757486, 64.30572, 11.564992, -15.162109, 147.11182, 38.132813)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock12/StaticBody3D4" unique_id=603693909]
+shape = SubResource("ConvexPolygonShape3D_e61ml")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Terrain3D/Rocks/Rock12" unique_id=1524352761]
+transform = Transform3D(-31.811626, 9.727983, -94.30475, 63.35247, 76.18329, -13.51189, 70.53004, -64.042755, -30.398058, 0, 46.33252, -0.00024414063)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock12/StaticBody3D5" unique_id=706343272]
+shape = SubResource("ConvexPolygonShape3D_s47sv")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="Terrain3D/Rocks/Rock12" unique_id=1475614382]
+transform = Transform3D(-88.51489, 44.266953, 14.336992, 42.300514, 89.38924, -14.840148, -19.385014, -7.071116, -97.847946, -82.74219, 33.14087, -9.69397)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock12/StaticBody3D6" unique_id=1404490638]
+shape = SubResource("ConvexPolygonShape3D_5n34b")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="Terrain3D/Rocks/Rock12" unique_id=802600864]
+transform = Transform3D(48.00301, -14.25, -13.856003, -10.23255, -53.30146, 8.259755, -20.688534, -6.700959, -36.23496, -76.58252, 69.98828, 0.00024414063)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock12/StaticBody3D7" unique_id=91191764]
+shape = SubResource("ConvexPolygonShape3D_bys04")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="Terrain3D/Rocks/Rock12" unique_id=1589703307]
+transform = Transform3D(6.390993, -8.526442, 61.439266, -49.026237, 37.143013, 10.254421, -37.99884, -49.356106, -2.8968692, -205.12012, 101.998535, 4.175537)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock12/StaticBody3D8" unique_id=1049480733]
+shape = SubResource("ConvexPolygonShape3D_68adg")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="Terrain3D/Rocks/Rock12" unique_id=1995775631]
+transform = Transform3D(-1.2471275, -18.115395, 59.654045, -49.026222, 37.143024, 10.254436, -38.512367, -46.696426, -14.9856415, -205.13818, 32.48706, 12.734131)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock12/StaticBody3D9" unique_id=331104648]
+shape = SubResource("ConvexPolygonShape3D_mibjj")
+
+[node name="Rock13" parent="Terrain3D/Rocks" unique_id=617241696 instance=ExtResource("26_m4cqx")]
+transform = Transform3D(0.0073943716, -0.0012393838, 0.006617186, 0.0067321924, 0.0014023666, -0.0072602257, -2.8153649e-05, 0.0098233, 0.0018713367, 90.23493, 20.946188, 81.362076)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain3D/Rocks/Rock13" unique_id=1292173311]
+transform = Transform3D(24.59756, -21.24061, 63.58185, 65.569374, -6.465744, -27.526457, 13.945314, 67.866684, 17.27708, 111.04541, 24.202637, 0.00024414063)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock13/StaticBody3D" unique_id=45643283]
+shape = SubResource("ConvexPolygonShape3D_e3avu")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Terrain3D/Rocks/Rock13" unique_id=38408226]
+transform = Transform3D(-35.579987, -9.39244, -5.1098137, -7.5613966, 34.655266, -11.049942, 7.5599895, -9.542432, -35.10061, 68.69629, 100.31641, 12.641846)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock13/StaticBody3D2" unique_id=97141744]
+shape = SubResource("ConvexPolygonShape3D_m4cqx")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Terrain3D/Rocks/Rock13" unique_id=205886942]
+transform = Transform3D(-12.902276, -5.3595996, -21.810112, -1.52009, 25.30364, -5.3188524, 22.407488, -1.369508, -12.91913, 10.665039, 93.7063, -28.441528)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock13/StaticBody3D3" unique_id=452298215]
+shape = SubResource("ConvexPolygonShape3D_d63ey")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Terrain3D/Rocks/Rock13" unique_id=2084459958]
+transform = Transform3D(5.7981358, -10.24097, 67.85179, 65.07961, 22.411148, -2.1786938, -21.757486, 64.30572, 11.564992, -15.162109, 147.11182, 38.132813)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock13/StaticBody3D4" unique_id=1489357119]
+shape = SubResource("ConvexPolygonShape3D_e61ml")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Terrain3D/Rocks/Rock13" unique_id=1092044059]
+transform = Transform3D(-31.811626, 9.727983, -94.30475, 63.35247, 76.18329, -13.51189, 70.53004, -64.042755, -30.398058, 0, 46.33252, -0.00024414063)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock13/StaticBody3D5" unique_id=788949338]
+shape = SubResource("ConvexPolygonShape3D_s47sv")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="Terrain3D/Rocks/Rock13" unique_id=688733445]
+transform = Transform3D(-88.51489, 44.266953, 14.336992, 42.300514, 89.38924, -14.840148, -19.385014, -7.071116, -97.847946, -82.74219, 33.14087, -9.69397)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock13/StaticBody3D6" unique_id=899043744]
+shape = SubResource("ConvexPolygonShape3D_5n34b")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="Terrain3D/Rocks/Rock13" unique_id=1197256023]
+transform = Transform3D(48.00301, -14.25, -13.856003, -10.23255, -53.30146, 8.259755, -20.688534, -6.700959, -36.23496, -76.58252, 69.98828, 0.00024414063)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock13/StaticBody3D7" unique_id=940566976]
+shape = SubResource("ConvexPolygonShape3D_bys04")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="Terrain3D/Rocks/Rock13" unique_id=794470440]
+transform = Transform3D(6.390993, -8.526442, 61.439266, -49.026237, 37.143013, 10.254421, -37.99884, -49.356106, -2.8968692, -205.12012, 101.998535, 4.175537)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock13/StaticBody3D8" unique_id=34331369]
+shape = SubResource("ConvexPolygonShape3D_68adg")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="Terrain3D/Rocks/Rock13" unique_id=1844477708]
+transform = Transform3D(-1.2471275, -18.115395, 59.654045, -49.026222, 37.143024, 10.254436, -38.512367, -46.696426, -14.9856415, -205.13818, 32.48706, 12.734131)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain3D/Rocks/Rock13/StaticBody3D9" unique_id=483176256]
 shape = SubResource("ConvexPolygonShape3D_mibjj")
 
 [node name="Rock5" parent="Terrain3D/Rocks" unique_id=466344225 instance=ExtResource("26_m4cqx")]
