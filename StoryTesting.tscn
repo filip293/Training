@@ -2706,7 +2706,7 @@ transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.9652071, 2.4674735
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.9652071, 2.4674735, 30.316723)
 
 [node name="PineTree34" parent="Trees/Pine Trees" unique_id=1883185581 instance=ExtResource("59_wk0uk")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 10.619286, 2.4674735, -2.363905)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 10.619286, 0.7220981, -2.363905)
 
 [node name="PineTree6" parent="Trees/Pine Trees" unique_id=813165413 instance=ExtResource("59_wk0uk")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 44.736473, 0.49438047, -0.96824265)
