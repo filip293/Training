@@ -9,10 +9,11 @@ points = PackedVector3Array(0.10864258, -0.26114273, -1.3972839, 0.89993215, 23.
 [node name="Sketchfab_Scene" unique_id=1655463686 instance=ExtResource("1_1vvux")]
 script = ExtResource("2_iu8q0")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0" unique_id=1271079625]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, -2.220446e-18, 0, 2.220446e-18, 0.01, -0.23158346, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1889712846]
+shape = SubResource("ConvexPolygonShape3D_cuixy")
+
 [node name="pCylinder4_Door_0" parent="Sketchfab_model/7220427d45e442bf8a65c3a3dcde8754_fbx/RootNode/pCylinder4" parent_id_path=PackedInt32Array(2126594858) index="0" unique_id=1886295360]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.158346, 0, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/7220427d45e442bf8a65c3a3dcde8754_fbx/RootNode/pCylinder4/pCylinder4_Door_0" index="0" unique_id=1271079625]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/7220427d45e442bf8a65c3a3dcde8754_fbx/RootNode/pCylinder4/pCylinder4_Door_0/StaticBody3D" index="0" unique_id=1889712846]
-shape = SubResource("ConvexPolygonShape3D_cuixy")

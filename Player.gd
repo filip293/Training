@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export_group("Cinematic Movement Settings")
-@export var walk_speed: float = 2.0
+@export var walk_speed: float = 16.0
 @export var acceleration: float = 8.0
 @export var deceleration: float = 10.0
 @export var air_control: float = 4.0
@@ -25,10 +25,11 @@ extends CharacterBody3D
 @export var road_footsteps: Array[AudioStream] = []
 @export var house_footsteps: Array[AudioStream] = []
 
-@onready var camera: Camera3D = $Camera3D
-@onready var interaction_ray: RayCast3D = $Camera3D/RayCast3D
-@onready var footstep_player: AudioStreamPlayer3D = $FootstepAudioPlayer3D
-@onready var ground_detector: Area3D = $GroundDetectorArea3D
+@onready var camera: Camera3D = get_node_or_null("Camera3D")
+@onready var interaction_ray: RayCast3D = get_node_or_null("Camera3D/RayCast3D")
+@onready var interact_label: Label = get_node_or_null("HUD/InteractPrompt")
+@onready var footstep_player: AudioStreamPlayer3D = get_node_or_null("FootstepAudioPlayer3D")
+@onready var ground_detector: Area3D = get_node_or_null("GroundDetectorArea3D")
 
 var rotation_x: float = 0.0
 var distance_traveled: float = 0.0
@@ -40,6 +41,8 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if camera:
 		default_cam_pos = camera.position
+	if interact_label:
+		interact_label.hide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -92,9 +95,28 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+	# Check what we are looking at to update the UI prompt
+	_update_interaction_prompt()
+
 	# Apply Camera effects and process footsteps
 	_apply_cinematic_camera(delta)
 	_handle_footsteps(delta)
+
+func _update_interaction_prompt() -> void:
+	if not interaction_ray or not interact_label:
+		return
+		
+	interaction_ray.force_raycast_update()
+	
+	if interaction_ray.is_colliding():
+		var collider = interaction_ray.get_collider()
+		if collider:
+			# Check if collider or its parent has the interact method
+			if collider.has_method("interact") or (collider.get_parent() and collider.get_parent().has_method("interact")):
+				interact_label.show()
+				return
+			
+	interact_label.hide()
 
 func _try_interact() -> void:
 	if not interaction_ray:
@@ -104,9 +126,11 @@ func _try_interact() -> void:
 	
 	if interaction_ray.is_colliding():
 		var collider = interaction_ray.get_collider()
-		# Calls the interact() function on whatever object we are looking at (like our door)
-		if collider and collider.has_method("interact"):
-			collider.interact()
+		if collider:
+			if collider.has_method("interact"):
+				collider.interact()
+			elif collider.get_parent() and collider.get_parent().has_method("interact"):
+				collider.get_parent().interact()
 
 func _apply_cinematic_camera(delta: float) -> void:
 	if not camera:
@@ -125,11 +149,12 @@ func _apply_cinematic_camera(delta: float) -> void:
 		camera.position.y = lerp(camera.position.y, target_y, 10.0 * delta)
 		camera.position.x = lerp(camera.position.x, target_x, 10.0 * delta)
 	else:
-		# Smoothly reset camera pos when stopped or airborne
 		bob_time = 0.0
 		camera.position = camera.position.lerp(default_cam_pos, 8.0 * delta)
 
 func _handle_footsteps(delta: float) -> void:
+	if not footstep_player:
+		return
 	var horizontal_velocity = Vector3(velocity.x, 0, velocity.z)
 	if is_on_floor() and horizontal_velocity.length() > 0.1:
 		distance_traveled += horizontal_velocity.length() * delta
@@ -137,7 +162,7 @@ func _handle_footsteps(delta: float) -> void:
 			distance_traveled = 0.0
 			_play_footstep_sound()
 	else:
-		distance_traveled = step_distance * 0.5  # Ready steps as soon as walking resumes
+		distance_traveled = step_distance * 0.5
 
 func _play_footstep_sound() -> void:
 	if not footstep_player:
@@ -161,7 +186,6 @@ func _play_footstep_sound() -> void:
 
 	if not audio_pool.is_empty():
 		footstep_player.stream = audio_pool.pick_random()
-		# Dynamic pitch variation to prevent audio fatigue
 		footstep_player.pitch_scale = randf_range(0.92, 1.05)
 		footstep_player.play()
 
