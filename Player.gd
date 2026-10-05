@@ -111,10 +111,13 @@ func _update_interaction_prompt() -> void:
 	if interaction_ray.is_colliding():
 		var collider = interaction_ray.get_collider()
 		if collider:
-			# Check if collider or its parent has the interact method
-			if collider.has_method("interact") or (collider.get_parent() and collider.get_parent().has_method("interact")):
-				interact_label.show()
-				return
+			# Traverse up parents to see if this object belongs to a doors manager
+			var parent = collider.get_parent()
+			while parent:
+				if parent.has_method("try_interact_with"):
+					interact_label.show()
+					return
+				parent = parent.get_parent()
 			
 	interact_label.hide()
 
@@ -127,10 +130,13 @@ func _try_interact() -> void:
 	if interaction_ray.is_colliding():
 		var collider = interaction_ray.get_collider()
 		if collider:
-			if collider.has_method("interact"):
-				collider.interact()
-			elif collider.get_parent() and collider.get_parent().has_method("interact"):
-				collider.get_parent().interact()
+			# Find the parent manager and send the hit collider to it
+			var parent = collider.get_parent()
+			while parent:
+				if parent.has_method("try_interact_with"):
+					parent.try_interact_with(collider)
+					return
+				parent = parent.get_parent()
 
 func _apply_cinematic_camera(delta: float) -> void:
 	if not camera:
