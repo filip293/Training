@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bitdmewh3qa5t"
+path="res://.godot/imported/ElevenLabs_2026-10-06T15_15_06_Samantha - Emotional, Soft and Intimate_pvc_sp120_s23_sb75_v4.mp3-183dea6586eaf74cb1afb8b55f9f6296.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Voice Chatting/ElevenLabs_2026-10-06T15_15_06_Samantha - Emotional, Soft and Intimate_pvc_sp120_s23_sb75_v4.mp3"
+dest_files=["res://.godot/imported/ElevenLabs_2026-10-06T15_15_06_Samantha - Emotional, Soft and Intimate_pvc_sp120_s23_sb75_v4.mp3-183dea6586eaf74cb1afb8b55f9f6296.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

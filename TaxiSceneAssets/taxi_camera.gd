@@ -24,7 +24,7 @@ func _ready():
 	
 	# Remember starting height for the rumble effect
 	start_y = position.y
-
+	
 func _input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		yaw -= event.relative.x * sensitivity
@@ -38,11 +38,9 @@ func _input(event):
 		rotation.y = yaw
 		rotation.x = pitch
 
+	# Completely quit the game when pressing Escape
 	if event.is_action_pressed("ui_cancel"):
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		get_tree().quit()
 
 func _process(delta):
 	time_passed += delta

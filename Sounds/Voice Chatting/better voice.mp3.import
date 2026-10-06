@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cit2wv3acxo5j"
+path="res://.godot/imported/better voice.mp3-af88f5f106590eeda37c12bd6ef9c766.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Voice Chatting/better voice.mp3"
+dest_files=["res://.godot/imported/better voice.mp3-af88f5f106590eeda37c12bd6ef9c766.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

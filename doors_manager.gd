@@ -66,6 +66,16 @@ func _play_spatial_sound(pos: Vector3) -> void:
 	audio_player.global_position = pos
 	audio_player.unit_size = 3.0
 	audio_player.max_distance = 15.0
+	
 	get_tree().current_scene.add_child(audio_player)
 	audio_player.play()
+	
+	# Automatically cut off and delete the sound after 1.5 seconds
+	var timer = get_tree().create_timer(1.6)
+	timer.timeout.connect(func():
+		if is_instance_valid(audio_player):
+			audio_player.stop()
+			audio_player.queue_free()
+	)
+	
 	audio_player.finished.connect(audio_player.queue_free)
