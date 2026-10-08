@@ -14,6 +14,7 @@ extends CanvasLayer
 var master_bus : int
 var is_game_started : bool = false
 
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	master_bus = AudioServer.get_bus_index("Master")

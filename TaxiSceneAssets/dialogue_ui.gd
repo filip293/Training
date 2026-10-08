@@ -62,26 +62,24 @@ func show_dialogue():
 	label.text = "[center]" + lines[current_line] + "[/center]"
 	label.visible_characters = 0
 	
-	# Get the duration for this specific line (fallback to 3.0s if missing)
 	var current_duration = 3.0
 	if current_line < line_durations.size():
 		current_duration = line_durations[current_line]
 	
-	# Make the text finish typing slightly before the audio line ends (80% of the total duration)
 	var type_tween = get_tree().create_tween()
+	type_tween.set_pause_mode(Tween.TWEEN_PAUSE_BOUND)
 	type_tween.tween_property(label, "visible_ratio", 1.0, current_duration * 0.80)
 	
-	# Start a timer for the full duration of the line + pause
-	var timer = get_tree().create_timer(current_duration)
-	timer.timeout.connect(_on_line_timer_finished)
+	# Call your global script. It defaults to pausable = true.
+	Global.calltime(current_duration).connect(_on_line_timer_finished)
 
 func _on_line_timer_finished():
 	current_line += 1
 	if current_line < lines.size():
 		show_dialogue()
 	else:
-		# Wait for 5 seconds before starting the scene transition
-		await get_tree().create_timer(5.0).timeout
+		# Await your global script for the final 5-second delay
+		await Global.calltime(5.0)
 		start_scene_transition()
 
 func start_scene_transition():

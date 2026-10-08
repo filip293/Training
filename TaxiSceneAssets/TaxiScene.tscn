@@ -1147,6 +1147,7 @@ bus = &"Muffled"
 parameters/looping = true
 
 [node name="DialogueUI" type="CanvasLayer" parent="." unique_id=254226553]
+process_mode = 1
 script = ExtResource("12_vj5xn")
 
 [node name="Panel" type="Panel" parent="DialogueUI" unique_id=934776708]
@@ -1188,10 +1189,9 @@ stream = SubResource("AudioStreamMP3_8pvuw")
 autoplay = true
 
 [node name="Background Music" type="AudioStreamPlayer" parent="." unique_id=614850229]
+process_mode = 3
 stream = SubResource("AudioStreamMP3_vj5xn")
-
 volume_db = -2.0
-
 autoplay = true
 
 [node name="MainMenuUI" type="CanvasLayer" parent="." unique_id=632419314 node_paths=PackedStringArray("menu_camera", "player_camera", "narrative_ui", "radio_player")]

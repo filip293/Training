@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout="uid://df8fkrgycia8k"
 
+[autoload]
+
+Global="*uid://cfgv6m1qa8b3f"
+
 [debug]
 
 settings/stdout/print_fps=true
