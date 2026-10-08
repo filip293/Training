@@ -53,7 +53,8 @@ func _ready():
 	var fade_in = get_tree().create_tween()
 	fade_in.tween_property(fade_rect, "modulate:a", 0.0, 2.0)
 	
-	# Start the single audio file once
+
+func begin_story():
 	voice_player.play() 
 	show_dialogue()
 

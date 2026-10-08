@@ -12,6 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://d382xd4vkcva8" path="res://Characters/Characters_psx_01/Textures/Character_03.png" id="10_v200v"]
 [ext_resource type="AudioStream" uid="uid://cit2wv3acxo5j" path="res://Sounds/Voice Chatting/better voice.mp3" id="12_dhdaa"]
 [ext_resource type="Script" uid="uid://2oafvgedbubw" path="res://TaxiSceneAssets/dialogue_ui.gd" id="12_vj5xn"]
+[ext_resource type="Script" uid="uid://btekfvgot65th" path="res://TaxiSceneAssets/main_menu_ui.gd" id="13_eo2vt"]
+[ext_resource type="FontFile" uid="uid://1fmahi2tkydm" path="res://fonts/static/PlayfairDisplay-Bold.ttf" id="14_gxyak"]
+[ext_resource type="FontFile" uid="uid://b7hifp0tgpumh" path="res://fonts/PlayfairDisplay-VariableFont_wght.ttf" id="15_1accj"]
+[ext_resource type="FontFile" uid="uid://h1tq6fulcens" path="res://fonts/static/PlayfairDisplay-SemiBoldItalic.ttf" id="16_38kfv"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_vj5xn"]
 panorama = ExtResource("1_8pvuw")
@@ -1167,6 +1171,7 @@ bbcode_enabled = true
 fit_content = true
 
 [node name="FadeRect" type="ColorRect" parent="DialogueUI" unique_id=1525775314]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1184,5 +1189,165 @@ autoplay = true
 
 [node name="Background Music" type="AudioStreamPlayer" parent="." unique_id=614850229]
 stream = SubResource("AudioStreamMP3_vj5xn")
-volume_db = -7.406
 autoplay = true
+
+[node name="MainMenuUI" type="CanvasLayer" parent="." unique_id=632419314 node_paths=PackedStringArray("menu_camera", "player_camera", "narrative_ui", "radio_player")]
+process_mode = 3
+script = ExtResource("13_eo2vt")
+menu_camera = NodePath("MenuCamera")
+player_camera = NodePath("../MainCar/Camera3D")
+narrative_ui = NodePath("../DialogueUI")
+radio_player = NodePath("../Background Music")
+
+[node name="MenuCamera" type="Camera3D" parent="MainMenuUI" unique_id=365880467]
+transform = Transform3D(-0.5168322, 0, 0.8560868, 0, 1, 0, -0.8560868, 0, -0.5168322, -29.11469, 10.891647, -93.35428)
+current = true
+
+[node name="TitleLabel" type="Label" parent="MainMenuUI" unique_id=1569448098]
+anchors_preset = -1
+anchor_left = 0.354
+anchor_top = 0.080000006
+anchor_right = 0.65300006
+anchor_bottom = 0.16900001
+offset_left = -0.6799927
+offset_top = -0.40000916
+offset_right = -0.76013184
+offset_bottom = 0.47998047
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.49411765)
+theme_override_fonts/font = ExtResource("14_gxyak")
+theme_override_font_sizes/font_size = 72
+text = "PlaceHolder Title"
+
+[node name="MenuContainer" type="VBoxContainer" parent="MainMenuUI" unique_id=675840094]
+anchors_preset = -1
+anchor_top = 0.49400002
+anchor_right = 0.16700001
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = -33.52002
+offset_right = 60.359985
+offset_bottom = -206.0
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="MainMenuUI/MenuContainer" unique_id=1518527321]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+theme_override_fonts/font = ExtResource("15_1accj")
+theme_override_font_sizes/font_size = 80
+text = "Start"
+flat = true
+alignment = 0
+
+[node name="Settings" type="Button" parent="MainMenuUI/MenuContainer" unique_id=1364376433]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+theme_override_fonts/font = ExtResource("15_1accj")
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+flat = true
+alignment = 0
+
+[node name="Quit" type="Button" parent="MainMenuUI/MenuContainer" unique_id=177771862]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+theme_override_fonts/font = ExtResource("15_1accj")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+flat = true
+alignment = 0
+
+[node name="SettingsPanel" type="ColorRect" parent="MainMenuUI" unique_id=565851792]
+visible = false
+anchors_preset = -1
+anchor_right = 0.069000006
+anchor_bottom = 0.115
+offset_left = 1308.0
+offset_top = -1.0
+offset_right = 1787.52
+offset_bottom = 954.8
+color = Color(0, 0, 0, 0.5686275)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuUI/SettingsPanel" unique_id=1776015350]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 244.0
+offset_right = 574.0
+offset_bottom = 992.0
+
+[node name="Label" type="Label" parent="MainMenuUI/SettingsPanel/VBoxContainer" unique_id=838170040]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("16_38kfv")
+theme_override_font_sizes/font_size = 33
+text = "Master Volume"
+
+[node name="HSlider" type="HSlider" parent="MainMenuUI/SettingsPanel/VBoxContainer" unique_id=1140028486]
+layout_mode = 2
+size_flags_vertical = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label2" type="Label" parent="MainMenuUI/SettingsPanel/VBoxContainer" unique_id=485179942]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("16_38kfv")
+theme_override_font_sizes/font_size = 33
+text = "Voices Volume"
+
+[node name="HSlider2" type="HSlider" parent="MainMenuUI/SettingsPanel/VBoxContainer" unique_id=153513636]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Label3" type="Label" parent="MainMenuUI/SettingsPanel/VBoxContainer" unique_id=647151122]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("16_38kfv")
+theme_override_font_sizes/font_size = 33
+text = "Radio Volume"
+
+[node name="HSlider3" type="HSlider" parent="MainMenuUI/SettingsPanel/VBoxContainer" unique_id=837193905]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="MainMenuUI/SettingsPanel" unique_id=1876859502]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 34.0
+offset_right = 569.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+theme_override_fonts/font = ExtResource("14_gxyak")
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="MainMenuUI/SettingsPanel" unique_id=779512153]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 8.0
+offset_right = 613.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 25
+text = "Back"
+
+[node name="FadeRect" type="ColorRect" parent="MainMenuUI" unique_id=1660357011]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="MainMenuUI/MenuContainer/StartButton" to="MainMenuUI" method="_on_start_button_pressed"]
+[connection signal="pressed" from="MainMenuUI/MenuContainer/Settings" to="MainMenuUI" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MainMenuUI/MenuContainer/Quit" to="MainMenuUI" method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="MainMenuUI/SettingsPanel/VBoxContainer/HSlider" to="MainMenuUI" method="_on_master_slider_value_changed"]
+[connection signal="pressed" from="MainMenuUI/SettingsPanel/Button" to="MainMenuUI" method="_on_back_button_pressed"]

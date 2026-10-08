@@ -38,9 +38,7 @@ func _input(event):
 		rotation.y = yaw
 		rotation.x = pitch
 
-	# Completely quit the game when pressing Escape
-	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+
 
 func _process(delta):
 	time_passed += delta
