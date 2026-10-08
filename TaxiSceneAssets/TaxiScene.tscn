@@ -1189,6 +1189,9 @@ autoplay = true
 
 [node name="Background Music" type="AudioStreamPlayer" parent="." unique_id=614850229]
 stream = SubResource("AudioStreamMP3_vj5xn")
+
+volume_db = -2.0
+
 autoplay = true
 
 [node name="MainMenuUI" type="CanvasLayer" parent="." unique_id=632419314 node_paths=PackedStringArray("menu_camera", "player_camera", "narrative_ui", "radio_player")]
