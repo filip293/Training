@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbyihdmna2bm4"
+path="res://.godot/imported/Slightly Normal breathing.mp3-e67ffe7b1263ebd00c53b1700427a7da.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Breathing/Slightly Normal breathing.mp3"
+dest_files=["res://.godot/imported/Slightly Normal breathing.mp3-e67ffe7b1263ebd00c53b1700427a7da.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
